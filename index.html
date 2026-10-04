@@ -7,193 +7,272 @@
   <meta name="theme-color" content="#0b1733">
   <title>WEISSWERK | Gebäudereinigung & Facility Services</title>
   <link rel="icon" href="assets/weisswerk-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-building.png">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v8h4M18 9h2a2 2 0 0 1 2 2v11h-4M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.9 15.5A2 2 0 0 0 8.5 14l-6.1-1.6a.5.5 0 0 1 0-1L8.5 9.9A2 2 0 0 0 9.9 8.5l1.6-6.1a.5.5 0 0 1 1 0l1.6 6.1a2 2 0 0 0 1.4 1.4l6.1 1.6a.5.5 0 0 1 0 1L15.5 14a2 2 0 0 0-1.4 1.4l-1.6 6.1a.5.5 0 0 1-1 0z"/><path d="M20 3v4M22 5h-4"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-facade" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#leistungen">Zum Inhalt springen</a>
+
   <header class="header" id="start">
     <div class="container nav">
       <a class="brand" href="#start" aria-label="WEISSWERK Startseite">
-        <span class="brand-main"><span>WEISS</span><b>WERK</b></span>
-        <span class="brand-sub">GEBÄUDEREINIGUNG &amp; FACILITY SERVICES</span>
+        <img src="assets/weisswerk-logo.png" alt="WEISSWERK Gebäudereinigung &amp; Facility Services" width="1390" height="240">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
       <nav id="nav-links" class="nav-links" aria-label="Hauptnavigation">
         <a href="#leistungen">Leistungen</a>
         <a href="#ueber-uns">Über uns</a>
         <a href="#prozess">Ablauf</a>
+        <a href="tel:+436765802455" class="nav-phone">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          +43 676 580 24 55
+        </a>
         <a href="#kontakt" class="nav-button">Angebot anfragen</a>
       </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="menu-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+        <span class="menu-toggle-label">Menü</span>
+      </button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-image" aria-hidden="true"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="eyebrow light">Graz · Steiermark</div>
-        <h1>Sauber. Zuverlässig.<br><span>Professionell.</span></h1>
-        <p class="hero-text">Professionelle Gebäudereinigung und Facility Services für Büros, Gewerbeobjekte und Unternehmen.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#kontakt">Kostenloses Angebot anfragen</a>
-          <a class="btn btn-ghost" href="tel:+436765802455">+43 676 580 24 55</a>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow light"><span class="eyebrow-dot" aria-hidden="true"></span>Graz · Steiermark</div>
+          <h1 id="hero-title">Sauber. Zuverlässig.<br><span>Professionell.</span></h1>
+          <p class="hero-text">Professionelle Gebäudereinigung und Facility Services für Büros, Gewerbeobjekte und Unternehmen.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#kontakt">
+              Kostenloses Angebot anfragen
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="tel:+436765802455">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              +43 676 580 24 55
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Individuell geplant</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Persönliche Betreuung</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Klarer Ablauf</li>
+          </ul>
         </div>
-        <div class="hero-meta">
-          <span>✓ Individuell geplant</span>
-          <span>✓ Persönliche Betreuung</span>
-          <span>✓ Klarer Ablauf</span>
-        </div>
-      </div>
 
-      <aside class="hero-card" aria-label="WEISSWERK auf einen Blick">
-        <img src="assets/weisswerk-logo.png" alt="WEISSWERK Logo">
-        <div class="hero-card-line"></div>
-        <strong>Gebäudereinigung &amp; Facility Services</strong>
-        <p>Graz &amp; Steiermark</p>
-        <a href="#leistungen">Unsere Leistungen <span>→</span></a>
-      </aside>
-    </div>
-  </section>
-
-    <section class="intro-strip">
-      <div class="container intro-grid">
-        <div><strong>WEISSWERK</strong><span>Gebäudereinigung &amp; Facility Services</span></div>
-        <div><strong>Region</strong><span>Graz &amp; Steiermark</span></div>
-        <div><strong>Kontakt</strong><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a></div>
+        <aside class="hero-card" aria-label="WEISSWERK auf einen Blick">
+          <img src="assets/weisswerk-logo.png" alt="WEISSWERK Logo" width="1390" height="240">
+          <div class="hero-card-line"></div>
+          <strong>Gebäudereinigung &amp; Facility Services</strong>
+          <p>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            Graz &amp; Steiermark
+          </p>
+          <a href="#leistungen">Unsere Leistungen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="leistungen">
+    <section class="intro-strip" aria-label="Kurzinfo">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-item">
+            <span class="intro-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
+            <div><strong>WEISSWERK</strong><span>Gebäudereinigung &amp; Facility Services</span></div>
+          </div>
+          <div class="intro-item">
+            <span class="intro-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <div><strong>Region</strong><span>Graz &amp; Steiermark</span></div>
+          </div>
+          <div class="intro-item">
+            <span class="intro-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+            <div><strong>Kontakt</strong><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="leistungen" aria-labelledby="leistungen-title">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="eyebrow">Unsere Leistungen</div>
-            <h2>Reinigung, die zu Ihrem Objekt passt.</h2>
+            <h2 id="leistungen-title">Reinigung, die zu Ihrem Objekt passt.</h2>
           </div>
-          <p>Vom regelmäßigen Reinigungsplan bis zum gezielten Sonder­einsatz: Wir stimmen den Leistungsumfang auf Ihre Anforderungen ab.</p>
+          <p>Vom regelmäßigen Reinigungsplan bis zum gezielten Sonder&shy;einsatz: Wir stimmen den Leistungsumfang auf Ihre Anforderungen ab.</p>
         </div>
 
         <div class="service-grid">
-          <article class="service-card featured">
-            <span class="service-no">01</span>
-            <div class="service-icon">↗</div>
+          <article class="service-card featured reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></div>
+              <span class="service-no">01</span>
+            </div>
             <h3>Unterhaltsreinigung</h3>
             <p>Regelmäßige Reinigung für Büros, Gewerbeobjekte, Shops und weitere betriebliche Räume.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-no">02</span>
-            <div class="service-icon">✦</div>
+          <article class="service-card reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></div>
+              <span class="service-no">02</span>
+            </div>
             <h3>Grund- &amp; Sonderreinigung</h3>
             <p>Intensive Reinigung für besondere Anforderungen, Übergaben und geplante Einsätze.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-no">03</span>
-            <div class="service-icon">□</div>
+          <article class="service-card reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-window"/></svg></div>
+              <span class="service-no">03</span>
+            </div>
             <h3>Glas- &amp; Fensterreinigung</h3>
             <p>Saubere Glasflächen und Fenster für einen gepflegten Gesamteindruck.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-no">04</span>
-            <div class="service-icon">▱</div>
+          <article class="service-card reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
+              <span class="service-no">04</span>
+            </div>
             <h3>Bodenpflege</h3>
             <p>Reinigung und Pflege von Bodenflächen passend zu Material und Nutzung.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-no">05</span>
-            <div class="service-icon">△</div>
+          <article class="service-card reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-facade"/></svg></div>
+              <span class="service-no">05</span>
+            </div>
             <h3>Fassadenreinigung</h3>
             <p>Professionelle Reinigung von Fassaden und Außenbereichen nach Bedarf.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-no">06</span>
-            <div class="service-icon">+</div>
+          <article class="service-card reveal">
+            <div class="service-top">
+              <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+              <span class="service-no">06</span>
+            </div>
             <h3>Facility Services</h3>
             <p>Ergänzende Leistungen rund um den laufenden Betrieb Ihrer Immobilie.</p>
-            <a href="#kontakt">Anfrage senden →</a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="ueber-uns">
+    <section class="section section-dark" id="ueber-uns" aria-labelledby="about-title">
       <div class="container about-grid">
-        <div class="about-brand-card">
+        <div class="about-brand-card reveal">
           <div class="about-brand">WEISS<span>WERK</span></div>
           <div class="about-line"></div>
           <p>SAUBER. ZUVERLÄSSIG. PROFESSIONELL.</p>
         </div>
         <div class="about-copy">
           <div class="eyebrow light">Über WEISSWERK</div>
-          <h2>Professionelle Reinigung mit klarer Kommunikation.</h2>
+          <h2 id="about-title">Professionelle Reinigung mit klarer Kommunikation.</h2>
           <p>WEISSWERK steht für professionelle Gebäudereinigung und Facility Services in Graz und der Steiermark. Im Mittelpunkt stehen verlässliche Abläufe, sorgfältige Ausführung und eine persönliche Betreuung.</p>
           <p>Gemeinsam definieren wir den passenden Leistungsumfang für Ihr Objekt – vom laufenden Reinigungsplan bis zur gezielten Sonderreinigung.</p>
-          <a class="text-link light-link" href="#kontakt">Gespräch vereinbaren →</a>
+          <a class="text-link light-link" href="#kontakt">Gespräch vereinbaren <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="prozess">
+    <section class="section" id="prozess" aria-labelledby="prozess-title">
       <div class="container">
         <div class="section-head centered">
           <div>
             <div class="eyebrow">Unser Ablauf</div>
-            <h2>Einfach von der Anfrage bis zum Service.</h2>
+            <h2 id="prozess-title">Einfach von der Anfrage bis zum Service.</h2>
           </div>
           <p>Transparent, persönlich und passend zu Ihrem Objekt.</p>
         </div>
-        <div class="process-grid">
-          <div class="process-card"><span>01</span><h3>Anfrage</h3><p>Sie senden uns kurz Ihre Anforderungen und den Standort.</p></div>
-          <div class="process-card"><span>02</span><h3>Besichtigung</h3><p>Bei Bedarf besprechen wir Flächen, Zeiten und Besonderheiten vor Ort.</p></div>
-          <div class="process-card"><span>03</span><h3>Angebot</h3><p>Sie erhalten einen passenden Leistungsumfang und ein transparentes Angebot.</p></div>
-          <div class="process-card"><span>04</span><h3>Service</h3><p>Nach Ihrer Freigabe starten wir zum vereinbarten Termin.</p></div>
-        </div>
+        <ol class="process-grid">
+          <li class="process-card reveal"><span>01</span><h3>Anfrage</h3><p>Sie senden uns kurz Ihre Anforderungen und den Standort.</p></li>
+          <li class="process-card reveal"><span>02</span><h3>Besichtigung</h3><p>Bei Bedarf besprechen wir Flächen, Zeiten und Besonderheiten vor Ort.</p></li>
+          <li class="process-card reveal"><span>03</span><h3>Angebot</h3><p>Sie erhalten einen passenden Leistungsumfang und ein transparentes Angebot.</p></li>
+          <li class="process-card reveal"><span>04</span><h3>Service</h3><p>Nach Ihrer Freigabe starten wir zum vereinbarten Termin.</p></li>
+        </ol>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section section-soft" aria-labelledby="business-title">
       <div class="container business-grid">
-        <div>
+        <div class="business-copy">
           <div class="eyebrow">Für Gewerbekunden</div>
-          <h2>Für unterschiedliche Objekte und Anforderungen.</h2>
+          <h2 id="business-title">Für unterschiedliche Objekte und Anforderungen.</h2>
           <p>Unser Angebot richtet sich an Unternehmen und gewerbliche Einrichtungen mit regelmäßigem oder punktuellem Reinigungsbedarf.</p>
         </div>
-        <div class="business-tags">
-          <span>Büros &amp; Verwaltung</span>
-          <span>Shops &amp; Verkaufsflächen</span>
-          <span>Gastronomie</span>
-          <span>Ordinationen &amp; Praxen</span>
-          <span>Gewerbe- &amp; Produktionsflächen</span>
-          <span>Gemeinschaftsflächen &amp; Objekte</span>
-        </div>
+        <ul class="business-tags">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Büros &amp; Verwaltung</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Shops &amp; Verkaufsflächen</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gastronomie</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ordinationen &amp; Praxen</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gewerbe- &amp; Produktionsflächen</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gemeinschaftsflächen &amp; Objekte</li>
+        </ul>
       </div>
     </section>
 
-    <section class="contact-section" id="kontakt">
+    <section class="contact-section" id="kontakt" aria-labelledby="kontakt-title">
       <div class="container contact-grid">
         <div class="contact-copy">
           <div class="eyebrow light">Kontakt</div>
-          <h2>Sie möchten ein Angebot?</h2>
+          <h2 id="kontakt-title">Sie möchten ein Angebot?</h2>
           <p>Schreiben Sie uns kurz, um welches Objekt es geht und welche Reinigung Sie benötigen. Wir melden uns zur Abstimmung der Details.</p>
           <div class="contact-list">
-            <a href="tel:+436765802455"><span>Telefon</span>+43 676 580 24 55</a>
-            <a href="mailto:office@weiss-werk.at"><span>E-Mail</span>office@weiss-werk.at</a>
-            <a href="https://www.weiss-werk.at"><span>Web</span>www.weiss-werk.at</a>
-            <div><span>Adresse</span>Steyrergasse 47/4, 8010 Graz, Österreich</div>
+            <a href="tel:+436765802455">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <span class="contact-text"><span>Telefon</span>+43 676 580 24 55</span>
+            </a>
+            <a href="mailto:office@weiss-werk.at">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span class="contact-text"><span>E-Mail</span>office@weiss-werk.at</span>
+            </a>
+            <a href="https://www.weiss-werk.at">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span>
+              <span class="contact-text"><span>Web</span>www.weiss-werk.at</span>
+            </a>
+            <div>
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <span class="contact-text"><span>Adresse</span>Steyrergasse 47/4, 8010 Graz, Österreich</span>
+            </div>
           </div>
         </div>
 
         <div class="contact-card">
+          <h3 class="contact-card-title">Angebot anfragen</h3>
           <form id="quote-form">
-            <label>Ihr Name<input name="name" required placeholder="Max Mustermann"></label>
-            <label>Unternehmen<input name="company" placeholder="Firma / Organisation"></label>
-            <label>E-Mail<input name="email" type="email" required placeholder="name@firma.at"></label>
+            <div class="form-row">
+              <label>Ihr Name<input name="name" required autocomplete="name" placeholder="Max Mustermann"></label>
+              <label>Unternehmen<input name="company" autocomplete="organization" placeholder="Firma / Organisation"></label>
+            </div>
+            <label>E-Mail<input name="email" type="email" required autocomplete="email" placeholder="name@firma.at"></label>
             <label>Ihre Anfrage<textarea name="message" required rows="5" placeholder="Welche Reinigung benötigen Sie? Wo befindet sich das Objekt?"></textarea></label>
-            <button class="btn btn-primary full" type="submit">Anfrage per E-Mail senden</button>
+            <button class="btn btn-primary full" type="submit">
+              Anfrage per E-Mail senden
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
             <small>Beim Absenden wird eine neue E-Mail mit Ihren Angaben vorbereitet.</small>
           </form>
         </div>
@@ -212,6 +291,15 @@
     </div>
     <div class="container footer-bottom"><span>© <span id="year"></span> WEISSWERK</span><a href="#start">Nach oben ↑</a></div>
   </footer>
+
+  <div class="mobile-cta" aria-label="Schnellkontakt">
+    <a href="tel:+436765802455" class="mobile-cta-call">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      Anrufen
+    </a>
+    <a href="#kontakt" class="mobile-cta-quote">Angebot anfragen</a>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
