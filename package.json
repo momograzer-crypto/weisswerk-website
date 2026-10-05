@@ -3,6 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "echo Static site - no build required"
+    "build": "rm -rf public && mkdir -p public && cp index.html script.js styles.css public/ && cp -r assets public/"
   }
 }
