@@ -2,14 +2,18 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="WEISSWERK Gebäudereinigung & Facility Services in Graz und der Steiermark. Unterhaltsreinigung, Grund- und Sonderreinigung, Glasreinigung, Bodenpflege, Fassadenreinigung und Facility Services.">
-  <meta name="theme-color" content="#0b1733">
+  <meta name="theme-color" content="#0a1430">
+  <meta property="og:title" content="WEISSWERK | Gebäudereinigung & Facility Services">
+  <meta property="og:description" content="Professionelle Gebäudereinigung und Facility Services in Graz und der Steiermark.">
+  <meta property="og:image" content="assets/hero-building.png">
+  <meta property="og:locale" content="de_AT">
   <title>WEISSWERK | Gebäudereinigung & Facility Services</title>
   <link rel="icon" href="assets/weisswerk-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/hero-building.png">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js')</script>
@@ -18,6 +22,7 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
@@ -58,6 +63,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-image" aria-hidden="true"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-lines" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="container hero-inner">
         <div class="hero-content">
           <div class="eyebrow light"><span class="eyebrow-dot" aria-hidden="true"></span>Graz · Steiermark</div>
@@ -81,16 +87,20 @@
         </div>
 
         <aside class="hero-card" aria-label="WEISSWERK auf einen Blick">
-          <img src="assets/weisswerk-logo.png" alt="WEISSWERK Logo" width="1390" height="240">
-          <div class="hero-card-line"></div>
-          <strong>Gebäudereinigung &amp; Facility Services</strong>
-          <p>
-            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
-            Graz &amp; Steiermark
-          </p>
-          <a href="#leistungen">Unsere Leistungen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <div class="hero-card-logo">
+            <img src="assets/weisswerk-logo.png" alt="WEISSWERK Logo" width="1390" height="240">
+          </div>
+          <div class="hero-card-body">
+            <strong>Gebäudereinigung &amp; Facility Services</strong>
+            <p>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              Graz &amp; Steiermark
+            </p>
+            <a href="#leistungen">Unsere Leistungen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
         </aside>
       </div>
+      <a class="hero-scroll" href="#leistungen" aria-label="Zu den Leistungen scrollen"><span aria-hidden="true"></span></a>
     </section>
 
     <section class="intro-strip" aria-label="Kurzinfo">
@@ -117,7 +127,7 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Unsere Leistungen</div>
-            <h2 id="leistungen-title">Reinigung, die zu Ihrem Objekt passt.</h2>
+            <h2 id="leistungen-title">Reinigung, die zu Ihrem <em>Objekt</em> passt.</h2>
           </div>
           <p>Vom regelmäßigen Reinigungsplan bis zum gezielten Sonder&shy;einsatz: Wir stimmen den Leistungsumfang auf Ihre Anforderungen ab.</p>
         </div>
@@ -130,7 +140,7 @@
             </div>
             <h3>Unterhaltsreinigung</h3>
             <p>Regelmäßige Reinigung für Büros, Gewerbeobjekte, Shops und weitere betriebliche Räume.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
           <article class="service-card reveal">
             <div class="service-top">
@@ -139,7 +149,7 @@
             </div>
             <h3>Grund- &amp; Sonderreinigung</h3>
             <p>Intensive Reinigung für besondere Anforderungen, Übergaben und geplante Einsätze.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
           <article class="service-card reveal">
             <div class="service-top">
@@ -148,7 +158,7 @@
             </div>
             <h3>Glas- &amp; Fensterreinigung</h3>
             <p>Saubere Glasflächen und Fenster für einen gepflegten Gesamteindruck.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
           <article class="service-card reveal">
             <div class="service-top">
@@ -157,7 +167,7 @@
             </div>
             <h3>Bodenpflege</h3>
             <p>Reinigung und Pflege von Bodenflächen passend zu Material und Nutzung.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
           <article class="service-card reveal">
             <div class="service-top">
@@ -166,7 +176,7 @@
             </div>
             <h3>Fassadenreinigung</h3>
             <p>Professionelle Reinigung von Fassaden und Außenbereichen nach Bedarf.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
           <article class="service-card reveal">
             <div class="service-top">
@@ -175,7 +185,7 @@
             </div>
             <h3>Facility Services</h3>
             <p>Ergänzende Leistungen rund um den laufenden Betrieb Ihrer Immobilie.</p>
-            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#kontakt">Anfrage senden <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </article>
         </div>
       </div>
@@ -190,7 +200,7 @@
         </div>
         <div class="about-copy">
           <div class="eyebrow light">Über WEISSWERK</div>
-          <h2 id="about-title">Professionelle Reinigung mit klarer Kommunikation.</h2>
+          <h2 id="about-title">Professionelle Reinigung mit <em>klarer</em> Kommunikation.</h2>
           <p>WEISSWERK steht für professionelle Gebäudereinigung und Facility Services in Graz und der Steiermark. Im Mittelpunkt stehen verlässliche Abläufe, sorgfältige Ausführung und eine persönliche Betreuung.</p>
           <p>Gemeinsam definieren wir den passenden Leistungsumfang für Ihr Objekt – vom laufenden Reinigungsplan bis zur gezielten Sonderreinigung.</p>
           <a class="text-link light-link" href="#kontakt">Gespräch vereinbaren <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -203,7 +213,7 @@
         <div class="section-head centered">
           <div>
             <div class="eyebrow">Unser Ablauf</div>
-            <h2 id="prozess-title">Einfach von der Anfrage bis zum Service.</h2>
+            <h2 id="prozess-title">Einfach von der Anfrage bis zum <em>Service.</em></h2>
           </div>
           <p>Transparent, persönlich und passend zu Ihrem Objekt.</p>
         </div>
@@ -220,7 +230,7 @@
       <div class="container business-grid">
         <div class="business-copy">
           <div class="eyebrow">Für Gewerbekunden</div>
-          <h2 id="business-title">Für unterschiedliche Objekte und Anforderungen.</h2>
+          <h2 id="business-title">Für unterschiedliche Objekte und <em>Anforderungen.</em></h2>
           <p>Unser Angebot richtet sich an Unternehmen und gewerbliche Einrichtungen mit regelmäßigem oder punktuellem Reinigungsbedarf.</p>
         </div>
         <ul class="business-tags">
@@ -238,7 +248,7 @@
       <div class="container contact-grid">
         <div class="contact-copy">
           <div class="eyebrow light">Kontakt</div>
-          <h2 id="kontakt-title">Sie möchten ein Angebot?</h2>
+          <h2 id="kontakt-title">Sie möchten ein <em>Angebot?</em></h2>
           <p>Schreiben Sie uns kurz, um welches Objekt es geht und welche Reinigung Sie benötigen. Wir melden uns zur Abstimmung der Details.</p>
           <div class="contact-list">
             <a href="tel:+436765802455">
@@ -267,7 +277,7 @@
               <label>Ihr Name<input name="name" required autocomplete="name" placeholder="Max Mustermann"></label>
               <label>Unternehmen<input name="company" autocomplete="organization" placeholder="Firma / Organisation"></label>
             </div>
-            <label>E-Mail<input name="email" type="email" required autocomplete="email" placeholder="name@firma.at"></label>
+            <label>E-Mail<input name="email" type="email" required autocomplete="email" inputmode="email" placeholder="name@firma.at"></label>
             <label>Ihre Anfrage<textarea name="message" required rows="5" placeholder="Welche Reinigung benötigen Sie? Wo befindet sich das Objekt?"></textarea></label>
             <button class="btn btn-primary full" type="submit">
               Anfrage per E-Mail senden
@@ -297,7 +307,10 @@
       <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
       Anrufen
     </a>
-    <a href="#kontakt" class="mobile-cta-quote">Angebot anfragen</a>
+    <a href="#kontakt" class="mobile-cta-quote">
+      Angebot anfragen
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
   </div>
 
   <script src="script.js"></script>

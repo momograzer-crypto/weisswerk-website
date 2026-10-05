@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (menuToggle && nav) {
     const setOpen = (open) => {
       nav.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
       menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.querySelector('.menu-toggle-label').textContent = open ? 'Schließen' : 'Menü';
     };
+    window.matchMedia('(min-width: 981px)').addEventListener('change', (event) => {
+      if (event.matches) setOpen(false);
+    });
     menuToggle.addEventListener('click', () => {
       setOpen(!nav.classList.contains('open'));
     });
@@ -43,6 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   } else {
     revealItems.forEach(item => item.classList.add('visible'));
+  }
+
+  const mobileCta = document.querySelector('.mobile-cta');
+  const ctaHideTargets = document.querySelectorAll('#kontakt, .footer');
+  if (mobileCta && ctaHideTargets.length && 'IntersectionObserver' in window) {
+    const visibleTargets = new Set();
+    const ctaObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visibleTargets.add(entry.target);
+        else visibleTargets.delete(entry.target);
+      });
+      mobileCta.classList.toggle('hidden', visibleTargets.size > 0);
+    }, { threshold: 0.15 });
+    ctaHideTargets.forEach(target => ctaObserver.observe(target));
   }
 
   const year = document.getElementById('year');
