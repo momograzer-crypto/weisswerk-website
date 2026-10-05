@@ -3,68 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07172f">
-  <meta name="description" content="WEISSWERK – Gebäudereinigung & Facility Services in Graz und der Steiermark. Professionelle Reinigung für Büros, Gewerbeobjekte und Unternehmen.">
+  <meta name="theme-color" content="#07182f">
+  <meta name="description" content="WEISSWERK – professionelle Gebäudereinigung & Facility Services in Graz und der Steiermark. Büroreinigung, Glas- und Fensterreinigung, Fassadenreinigung, Bodenreinigung und mehr.">
   <link rel="canonical" href="https://www.weiss-werk.at/">
   <link rel="icon" href="assets/weisswerk-logo.png">
   <title>WEISSWERK | Gebäudereinigung & Facility Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#07172f;--navy2:#0e2343;--blue:#1677f2;--sky:#66afff;--ink:#11203a;--muted:#60708a;
-      --line:#e3e9f1;--soft:#f5f8fc;--white:#fff;--green:#18c76f;
-      --shadow:0 26px 70px -28px rgba(7,23,47,.28);--shadow-lg:0 45px 110px -34px rgba(0,14,40,.5);
-      --r:22px;--font-head:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:#fff;color:var(--ink);font-family:var(--font);line-height:1.65}
-    a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button,input,textarea{font:inherit}
-    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
-    .skip{position:fixed;left:12px;top:12px;z-index:99;transform:translateY(-160%);background:#fff;padding:10px 14px;border-radius:10px;box-shadow:var(--shadow)}.skip:focus{transform:none}
-    .header{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(7,23,47,.07)}
-    .nav{height:84px;display:grid;grid-template-columns:180px 1fr;align-items:center;gap:28px}
-    .brand{display:block;width:180px;height:auto}.brand img{width:100%;height:auto}.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:4px;min-width:0}.nav-links a{padding:10px 11px;white-space:nowrap;border-radius:12px;font-family:var(--font-head);font-size:14px;font-weight:700;color:#41516a}.nav-links a:hover{background:var(--soft);color:var(--navy)}
-    .nav-phone{display:flex!important;align-items:center;gap:7px;color:var(--navy)!important;margin-left:5px;font-size:13px!important}.nav-phone svg{color:var(--blue)}
-    .nav-cta{background:var(--navy)!important;color:#fff!important;padding:12px 16px!important;border-radius:999px!important;margin-left:6px}.nav-cta:hover{background:var(--blue)!important}
-    .menu{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;width:44px;height:44px}
-    .hero{position:relative;min-height:clamp(720px,92vh,880px);padding-top:84px;display:grid;align-items:center;overflow:hidden;background:var(--navy)}
-    .hero-bg{position:absolute;inset:0;background-image:url('assets/hero-building.png');background-size:cover;background-position:72% center;transform:scale(1.04)}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,14,32,.97) 0%,rgba(5,17,39,.86) 41%,rgba(5,17,39,.52) 66%,rgba(5,17,39,.16) 100%)}
-    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:60px;align-items:center;padding:70px 0 110px}
-    .eyebrow{display:flex;align-items:center;gap:9px;font-family:var(--font-head);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-    .eyebrow.light{color:#b9d7ff}.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(22,119,242,.16)}
-    .hero h1{margin:0;color:#fff;font-family:var(--font-head);font-size:clamp(50px,6.4vw,88px);line-height:1.02;letter-spacing:-.055em;max-width:760px}.hero h1 span{color:var(--sky)}
-    .hero-lead{max-width:650px;margin:26px 0 34px;color:rgba(255,255,255,.8);font-size:18px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 20px;border-radius:999px;font-family:var(--font-head);font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.22s ease}
-    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 16px 30px -16px rgba(22,119,242,.8)}.btn-primary:hover{transform:translateY(-2px);background:#0f67da}
-    .btn-whatsapp{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}.btn-whatsapp:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08)}
-    .btn-dark{background:var(--navy);color:#fff}.btn-light{background:#fff;color:var(--navy);border-color:#d6dfeb}.btn-light:hover{background:#f3f7fb}
-    .hero-proof{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:38px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.78);font-size:14px}.hero-proof span{display:flex;align-items:center;gap:8px}.check{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:rgba(102,175,255,.16);color:var(--sky);font-weight:900}
-    .hero-side{position:relative;padding:28px;border:1px solid rgba(255,255,255,.18);border-radius:28px;background:rgba(255,255,255,.11);backdrop-filter:blur(16px);box-shadow:var(--shadow-lg);color:#fff}
-    .hero-side-logo{width:190px;height:auto;margin:0 auto 20px;opacity:1;filter:none;border-radius:14px;background:#fff;padding:8px;object-fit:contain}
-    .hero-side h3{margin:0 0 8px;font:800 22px/1.2 var(--font-head)}.hero-side p{margin:0;color:rgba(255,255,255,.74);font-size:14px}
-    .badge{position:absolute;right:-20px;top:-30px;width:118px;height:118px;border-radius:50%;object-fit:cover;background:#fff;border:5px solid #fff;box-shadow:0 18px 40px -18px rgba(0,0,0,.55);z-index:4}
-    .side-links{display:grid;gap:10px;margin-top:22px}.side-links a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);font-weight:700;font-size:14px}.side-links a:hover{background:rgba(255,255,255,.13)}
-    .quick{margin-top:-50px;position:relative;z-index:5}.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}.quick-card{padding:22px 24px}.quick-card+.quick-card{border-left:1px solid var(--line)}.quick-card small{display:block;color:#8290a6;font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;margin-bottom:4px}.quick-card strong,.quick-card a{font-family:var(--font-head);font-size:14px;font-weight:800;color:var(--navy)}.quick-card a:hover{color:var(--blue)}
-    .section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:36px;margin-bottom:48px}.section-head h2{margin:0;font:800 clamp(34px,4vw,54px)/1.08 var(--font-head);letter-spacing:-.04em;max-width:700px}.section-head p{margin:0;max-width:480px;color:var(--muted)}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:270px;display:flex;flex-direction:column;box-shadow:0 8px 30px -28px rgba(7,23,47,.3);transition:.25s ease}.service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.service.featured{background:linear-gradient(155deg,#10284b,#07172f);color:#fff;border-color:transparent}
-    .service-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:42px}.service-number{font:800 12px var(--font-head);letter-spacing:.14em;color:#9aa9bf}.service.featured .service-number{color:rgba(255,255,255,.45)}.service-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#edf4ff;color:var(--blue);font-size:20px;font-weight:900}.service.featured .service-icon{background:rgba(255,255,255,.1);color:#fff}.service h3{margin:0 0 11px;font:800 22px/1.2 var(--font-head)}.service p{margin:0;color:var(--muted);font-size:15px}.service.featured p{color:rgba(255,255,255,.72)}.service a{margin-top:auto;padding-top:24px;display:inline-flex;gap:8px;color:var(--blue);font:800 14px var(--font-head)}.service.featured a{color:var(--sky)}
-    .split{background:var(--soft)}.split-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.photo-card{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}.photo-card img{width:100%;aspect-ratio:1.3/1;object-fit:cover}.photo-caption{position:absolute;left:18px;right:18px;bottom:18px;padding:16px 18px;border-radius:16px;background:rgba(7,23,47,.82);backdrop-filter:blur(10px);color:#fff}.photo-caption strong{display:block;font:800 16px var(--font-head)}.photo-caption span{font-size:13px;color:rgba(255,255,255,.7)}
-    .feature-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.feature-box{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}.feature-box b{display:block;font:800 15px var(--font-head);margin-bottom:3px}.feature-box span{font-size:13px;color:var(--muted)}
-    .team-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);gap:54px;align-items:center}.team-image{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);background:#eef3f8}.team-image img{width:100%;aspect-ratio:1.5/1;object-fit:cover}.team-copy .eyebrow{margin-bottom:12px}.team-copy h2{margin:0 0 20px;font:800 clamp(34px,4vw,54px)/1.06 var(--font-head);letter-spacing:-.04em}.team-copy p{color:var(--muted);font-size:16px}.team-points{display:grid;gap:12px;margin:28px 0}.team-point{display:flex;align-items:flex-start;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:16px;background:#fff}.team-point .icon{width:32px;height:32px;border-radius:10px;background:#edf4ff;color:var(--blue);display:grid;place-items:center;flex:none;font-weight:900}.team-point strong{display:block;font:800 14px var(--font-head)}.team-point span{display:block;font-size:13px;color:var(--muted)}
-    .trust{background:var(--navy);color:#fff}.trust-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:center}.trust-badge{display:grid;place-items:center;padding:32px;background:#fff;border-radius:24px;max-width:320px;margin:auto;box-shadow:var(--shadow-lg)}.trust-badge img{width:230px}.trust-copy h2{margin:0 0 20px;color:#fff;font:800 clamp(34px,4vw,54px)/1.08 var(--font-head);letter-spacing:-.04em}.trust-copy p{color:rgba(255,255,255,.72);max-width:610px}.trust-note{margin-top:26px;font-size:12px;color:rgba(255,255,255,.5)}
-    .career{background:linear-gradient(180deg,#f8fbff 0%,#eef5fe 100%)}.career-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.career-copy h2{margin:0 0 18px;font:800 clamp(34px,4vw,54px)/1.06 var(--font-head);letter-spacing:-.04em}.career-copy p{color:var(--muted);max-width:500px}.career-card{padding:32px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.form{display:grid;gap:16px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form label{display:grid;gap:7px;font:800 13px var(--font-head);color:var(--navy)}.form input,.form textarea,.form select{width:100%;padding:13px 14px;border:1px solid #d8e0ea;border-radius:12px;background:#f8fafc;color:var(--ink);outline:none}.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(22,119,242,.12);background:#fff}.form textarea{min-height:130px;resize:vertical}.form small{color:#8492a8;font-size:12px}
-    .contact{background:var(--navy2);color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}.contact-copy h2{margin:0 0 16px;font:800 clamp(34px,4vw,54px)/1.06 var(--font-head);letter-spacing:-.04em}.contact-copy>p{color:rgba(255,255,255,.7);max-width:550px}.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.contact-meta{display:grid;gap:12px;margin-top:30px}.meta{display:flex;gap:13px;align-items:center;padding:14px 16px;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.035)}.meta-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(102,175,255,.12);color:var(--sky)}.meta small{display:block;color:rgba(255,255,255,.45);font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800}.meta strong,.meta a{font:800 14px var(--font-head);color:#fff}
-    .whatsapp-card{padding:26px;background:#fff;color:var(--ink);border-radius:24px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:190px 1fr;gap:24px;align-items:center}.whatsapp-card img{width:180px;border-radius:16px}.whatsapp-card h3{margin:0 0 8px;font:800 23px var(--font-head)}.whatsapp-card p{margin:0;color:var(--muted);font-size:14px}.wa-btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:11px 16px;border-radius:999px;background:var(--green);color:#fff;font:800 13px var(--font-head)}
-    .footer{background:#041022;color:rgba(255,255,255,.62);padding:64px 0 28px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}.footer-logo{width:190px;filter:brightness(0) invert(1);margin-bottom:14px}.footer strong{display:block;color:#fff;font:800 12px var(--font-head);letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}.footer p{margin:0;font-size:14px}.footer a:hover{color:#fff}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:24px;font-size:13px}
-    .mobile-bar{display:none}
-    .reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.js .reveal.show{opacity:1;transform:none}
-    @media (max-width:1020px){.nav-links{display:none}.menu{display:grid;place-items:center}.nav{height:74px;display:flex;justify-content:space-between}.brand{width:160px}.hero{padding-top:74px}.hero-inner{grid-template-columns:1fr}.hero-side{max-width:440px}.badge{right:-12px}.quick-grid{grid-template-columns:repeat(2,1fr)}.quick-card:nth-child(3){border-left:0;border-top:1px solid var(--line)}.quick-card:nth-child(4){border-top:1px solid var(--line)}.service-grid{grid-template-columns:repeat(2,1fr)}.split-grid,.team-grid,.trust-grid,.career-grid,.contact-grid{grid-template-columns:1fr}.split-grid,.team-grid,.trust-grid,.career-grid,.contact-grid{gap:42px}.trust-badge{max-width:300px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
-    @media (max-width:700px){.container{width:min(var(--max),calc(100% - 28px))}.brand{width:150px}.section{padding:76px 0}.hero{min-height:auto}.hero-inner{padding:60px 0 105px;gap:32px}.hero-bg{background-position:70% center}.hero-overlay{background:linear-gradient(180deg,rgba(4,14,32,.72) 0%,rgba(4,14,32,.9) 70%,rgba(4,14,32,.98) 100%)}.hero h1{font-size:clamp(46px,13vw,66px)}.hero-lead{font-size:16px}.actions{flex-direction:column}.actions .btn{width:100%}.hero-proof{flex-direction:column;gap:10px}.hero-side{padding:22px}.badge{width:98px;height:98px;right:-6px;top:-26px}.quick{margin-top:-42px}.quick-grid{grid-template-columns:1fr}.quick-card+.quick-card{border-left:0;border-top:1px solid var(--line)}.service-grid,.feature-list{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:16px}.split-grid,.team-grid,.trust-grid,.career-grid,.contact-grid{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr}.whatsapp-card{grid-template-columns:1fr;text-align:center}.whatsapp-card img{margin:auto}.form-row{grid-template-columns:1fr}.contact-actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column}.mobile-bar{position:fixed;left:10px;right:10px;bottom:10px;z-index:60;display:grid;grid-template-columns:1fr 1.35fr;gap:8px;padding:8px;border-radius:999px;background:rgba(7,23,47,.94);backdrop-filter:blur(14px);box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}.mobile-bar a{height:46px;display:grid;place-items:center;border-radius:999px;font:800 13px var(--font-head)}.mobile-call{background:rgba(255,255,255,.1);color:#fff}.mobile-wa{background:var(--green);color:#fff}body{padding-bottom:72px}}
-  </style>
-  <script>document.documentElement.classList.add('js')</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -74,229 +22,294 @@
     "telephone":"+43 676 580 24 55",
     "email":"office@weiss-werk.at",
     "areaServed":["Graz","Steiermark"],
-    "address":{"@type":"PostalAddress","streetAddress":"Steyrergasse 47/4","postalCode":"8010","addressLocality":"Graz","addressCountry":"AT"}
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Steyrergasse 47/4",
+      "postalCode":"8010",
+      "addressLocality":"Graz",
+      "addressCountry":"AT"
+    }
   }
   </script>
-<style>
-/* Final agreed WEISSWERK homepage */
-.header{z-index:80}
-.header .container.nav{height:78px;display:grid;grid-template-columns:180px minmax(0,1fr);gap:22px;align-items:center}
-.header .brand{display:block;width:180px;line-height:0}
-.header .brand img{width:180px;height:auto}
-.header .nav-links{display:flex;justify-content:flex-end;align-items:center;gap:2px;min-width:0}
-.header .nav-links a{padding:9px 9px;white-space:nowrap;font-size:13px}
-.header .nav-phone{font-size:13px!important;margin-left:7px}
-.header .nav-cta{padding:11px 15px!important;margin-left:7px}
-
-.homepage-hero{min-height:570px;padding-top:78px;position:relative;overflow:hidden;background:#07172f}
-.homepage-hero-bg{position:absolute;inset:0;background-image:url('assets/weisswerk-team.webp');background-size:cover;background-position:center 37%}
-.homepage-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,15,34,.92) 0%,rgba(4,15,34,.78) 40%,rgba(4,15,34,.34) 67%,rgba(4,15,34,.12) 100%)}
-.homepage-hero-grid{position:relative;z-index:2;min-height:492px;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:30px;align-items:center;padding:46px 0 62px}
-.homepage-copy{max-width:650px}
-.homepage-copy h1{margin:0;color:#fff;font:800 clamp(48px,5.25vw,72px)/.99 var(--font-head);letter-spacing:-.055em}
-.homepage-copy h1 span{color:#63a8ff}
-.homepage-copy .hero-lead{max-width:560px;font-size:15px;line-height:1.6;margin:18px 0 22px}
-.homepage-proof{margin-top:20px;padding-top:12px;border-top:0;gap:12px 20px;font-size:11px}
-.homepage-assurance{display:grid;gap:8px;align-self:center}
-.homepage-badge{width:82px;height:82px;object-fit:contain;border-radius:50%;padding:3px;background:#fff;justify-self:end;box-shadow:0 18px 36px -18px rgba(0,0,0,.55)}
-.homepage-card{padding:9px 10px;border-radius:11px;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.65);color:#0a1b35;box-shadow:0 12px 28px -18px rgba(0,0,0,.5)}
-.homepage-card b{display:block;font:800 10px/1.2 var(--font-head)}.homepage-card span{display:block;margin-top:2px;font-size:8px;color:#61708a}
-.homepage-team-float{position:absolute;right:105px;bottom:18px;display:flex;align-items:center;gap:9px;padding:9px 11px;min-width:230px;border-radius:13px;background:rgba(7,18,36,.88);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);color:#fff;box-shadow:0 18px 45px -25px rgba(0,0,0,.65)}
-.homepage-team-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:rgba(255,255,255,.10);color:#a6ccff;font-size:9px}
-.homepage-team-float b{display:block;font:800 12px/1.2 var(--font-head)}.homepage-team-float small{display:block;color:rgba(255,255,255,.68);font-size:8px}.homepage-team-float>strong{margin-left:auto}
-
-.homepage-quick{margin-top:-30px;position:relative;z-index:5}
-.homepage-quick .quick-grid{grid-template-columns:repeat(4,1fr);border-radius:14px}
-.homepage-quick .quick-card{min-height:62px;padding:12px 16px}
-.homepage-quick .quick-card small{font-size:8px;margin-bottom:2px}
-.homepage-quick .quick-card a,.homepage-quick .quick-card strong{font-size:12px}
-.homepage-quick .quick-card span{display:block;font-size:8px;color:#7c8b9f}
-.homepage-quick .quick-action{display:grid;place-content:center}
-
-.homepage-services{padding-top:62px}
-.homepage-service-head{margin-bottom:22px}
-.homepage-service-head h2{font-size:clamp(30px,3.2vw,42px)}
-.homepage-service-intro{display:flex;align-items:flex-end;gap:18px}
-.homepage-service-intro p{max-width:420px;font-size:10px;line-height:1.5}
-.homepage-service-intro .btn{min-height:34px;padding:0 12px;font-size:9px;white-space:nowrap}
-.homepage-services-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.homepage-service{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 8px 24px -20px rgba(7,23,47,.5)}
-.homepage-service>img{width:100%;height:75px;object-fit:cover}
-.homepage-service>div{display:flex;align-items:center;gap:6px;padding:7px 8px}
-.homepage-service>div>span{display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#edf4ff;color:var(--blue);font-size:10px;flex:none}
-.homepage-service h3{margin:0;font:800 9px/1.2 var(--font-head);white-space:nowrap}
-.homepage-service a{margin-left:auto;color:#8897aa;font-size:17px;line-height:1}
-
-@media (max-width:1020px){
-  .header .container.nav{display:flex;justify-content:space-between;height:74px}.header .brand{width:160px}.header .brand img{width:160px}.header .nav-links{display:none}
-  .homepage-hero{min-height:640px}.homepage-hero-grid{grid-template-columns:1fr;align-items:start;padding-top:44px}.homepage-assurance{position:absolute;right:14px;top:62px;width:185px}.homepage-badge{width:72px;height:72px}.homepage-team-float{right:18px}
-  .homepage-services-grid{grid-template-columns:repeat(3,1fr)}.homepage-service-intro{display:block}
-}
-@media (max-width:700px){
-  .homepage-hero{min-height:760px}.homepage-hero-bg{background-position:center top}.homepage-hero-overlay{background:linear-gradient(180deg,rgba(4,15,34,.58) 0%,rgba(4,15,34,.86) 55%,rgba(4,15,34,.98) 100%)}
-  .homepage-hero-grid{display:block;padding:42px 0 100px}.homepage-copy h1{font-size:clamp(46px,15vw,62px)}.homepage-copy .hero-lead{font-size:14px}
-  .homepage-assurance{position:relative;right:auto;top:auto;width:100%;display:flex;gap:7px;align-items:center;margin-top:16px}.homepage-badge{width:64px;height:64px;flex:none}.homepage-card{flex:1;padding:8px}.homepage-card b{font-size:9px}.homepage-card span{font-size:7px}
-  .homepage-team-float{left:14px;right:14px;bottom:15px;min-width:0}.homepage-quick{margin-top:-26px}.homepage-quick .quick-grid{grid-template-columns:1fr 1fr}
-  .homepage-services{padding-top:54px}.homepage-service-head{display:block}.homepage-service-intro{margin-top:9px}.homepage-services-grid{grid-template-columns:1fr 1fr}.homepage-service>img{height:92px}.homepage-service h3{font-size:8px}
-}
-</style></head>
+</head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
+
   <header class="header">
-  <div class="container nav">
-    <a class="brand" href="#start" aria-label="WEISSWERK Startseite">
-      <img src="assets/weisswerk-logo.png" alt="WEISSWERK – Gebäudereinigung & Facility Services">
-    </a>
-    <nav class="nav-links" aria-label="Hauptnavigation">
-      <a href="#start">Startseite</a>
-      <a href="#leistungen">Leistungen</a>
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#team">Unser Team</a>
-      <a href="#karriere">Karriere</a>
-      <a href="#kontakt">Kontakt</a>
-      <a class="nav-phone" href="tel:+436765802455">☎ +43 676 580 24 55</a>
-      <a class="nav-cta" href="#kontakt">Angebot anfragen →</a>
-    </nav>
-    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü">☰</button>
-  </div>
-  <nav id="mobileNav" class="nav-links container" style="display:none;flex-direction:column;align-items:stretch;padding-bottom:16px;background:#fff"></nav>
-</header>
+    <div class="container nav">
+      <a class="brand" href="#start" aria-label="WEISSWERK Startseite">
+        <img src="assets/weisswerk-logo.png" alt="WEISSWERK Gebäudereinigung & Facility Services">
+      </a>
 
-<main id="main">
-    <section class="hero homepage-hero" id="start">
-  <div class="homepage-hero-bg" aria-hidden="true"></div>
-  <div class="homepage-hero-overlay" aria-hidden="true"></div>
-  <div class="container homepage-hero-grid">
-    <div class="homepage-copy">
-      <div class="eyebrow light"><span class="eyebrow-dot"></span>Graz · Steiermark</div>
-      <h1>Sauber.<br><span>Zuverlässig.</span><br>Professionell.</h1>
-      <p class="hero-lead">Professionelle Gebäudereinigung und Facility Services für Büros, Gewerbeobjekte und Unternehmen.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#kontakt">Kostenloses Angebot anfragen →</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">Jetzt auf WhatsApp schreiben</a>
-      </div>
-      <div class="hero-proof homepage-proof">
-        <span><i class="check">✓</i> Individuell geplant</span>
-        <span><i class="check">✓</i> Persönliche Betreuung</span>
-        <span><i class="check">✓</i> Klarer Ablauf</span>
-      </div>
+      <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a class="active" href="#start">Startseite</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#team">Unser Team</a>
+        <a href="#karriere">Karriere</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="nav-phone" href="tel:+436765802455">☎ +43 676 580 24 55</a>
+        <a class="nav-cta" href="#kontakt">Angebot anfragen <span>→</span></a>
+      </nav>
     </div>
+  </header>
 
-    <aside class="homepage-assurance">
-      <img class="homepage-badge" src="assets/meisterbetrieb.webp" alt="Meisterbetrieb">
-      <div class="homepage-card"><b>Meisterbetrieb</b><span>Qualität &amp; Fachkompetenz</span></div>
-      <div class="homepage-card"><b>Nachhaltige Reinigungslösungen</b><span>Umweltbewusst</span></div>
-      <div class="homepage-card"><b>Zuverlässiger Partner</b><span>Für langfristige Zusammenarbeit</span></div>
-    </aside>
+  <main id="main">
+    <section id="start" class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
 
-    <a class="homepage-team-float" href="#team">
-      <span class="homepage-team-icon">●</span>
-      <span><b>Unser Team</b><small>Kompetent. Engagiert. Für Ihre Sauberkeit.</small></span>
-      <strong>→</strong>
-    </a>
-  </div>
-</section>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow light">Graz &amp; Steiermark</div>
+          <h1>Sauber.<br>Zuverlässig.<br><span>Professionell.</span></h1>
+          <p>Professionelle Gebäudereinigung und Facility Services für Büros, Gewerbeobjekte und Immobilien – Ihr starker Partner in Graz und der Steiermark.</p>
 
-    <section class="quick homepage-quick" aria-label="Schnellkontakt">
-  <div class="container quick-grid">
-    <div class="quick-card"><small>Telefon</small><a href="tel:+436765802455">+43 676 580 24 55</a><span>Mo – Fr · 07:00 – 18:00</span></div>
-    <div class="quick-card"><small>E-Mail</small><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a><span>Wir antworten schnell</span></div>
-    <div class="quick-card"><small>Adresse</small><strong>Graz &amp; Steiermark</strong><span>Regional für Ihr Objekt</span></div>
-    <div class="quick-card quick-action"><a href="#kontakt">Kontakt aufnehmen →</a><span>Persönlich &amp; zuverlässig</span></div>
-  </div>
-</section>
-
-    <section class="section homepage-services" id="leistungen">
-  <div class="container">
-    <div class="section-head homepage-service-head">
-      <div>
-        <div class="eyebrow">Unsere Leistungen</div>
-        <h2>Professionelle Reinigungslösungen.</h2>
-      </div>
-      <div class="homepage-service-intro">
-        <p>Wir bieten maßgeschneiderte Reinigungslösungen für Unternehmen, Büros, Gewerbeobjekte und Privathaushalte – zuverlässig, professionell und mit höchster Qualität.</p>
-        <a class="btn btn-light" href="#kontakt">Alle Leistungen ansehen →</a>
-      </div>
-    </div>
-
-    <div class="homepage-services-grid">
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Büroreinigung"><div><span>◌</span><h3>Büroreinigung</h3><a href="#kontakt">›</a></div></article>
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Glas- und Fensterreinigung" style="object-position:78% 35%"><div><span>✦</span><h3>Glas- &amp; Fensterreinigung</h3><a href="#kontakt">›</a></div></article>
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Fassadenreinigung" style="object-position:82% 25%"><div><span>⌂</span><h3>Fassadenreinigung</h3><a href="#kontakt">›</a></div></article>
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Bodenreinigung" style="object-position:43% 88%"><div><span>◈</span><h3>Bodenreinigung</h3><a href="#kontakt">›</a></div></article>
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Unterhaltsreinigung" style="object-position:60% 52%"><div><span>✚</span><h3>Unterhaltsreinigung</h3><a href="#kontakt">›</a></div></article>
-      <article class="homepage-service"><img src="assets/hero-building.png" alt="Sonderreinigung" style="object-position:22% 52%"><div><span>✥</span><h3>Sonderreinigung</h3><a href="#kontakt">›</a></div></article>
-    </div>
-  </div>
-</section>
-
-    <section class="section split" id="ueber-uns">
-      <div class="container split-grid">
-        <div class="photo-card reveal"><img src="assets/hero-building.png" alt="Moderne Glasfassade und professionelle Gebäudereinigung" loading="lazy"><div class="photo-caption"><strong>WEISSWERK · Graz</strong><span>Gebäudereinigung &amp; Facility Services</span></div></div>
-        <div>
-          <div class="eyebrow">Über WEISSWERK</div><div class="section-head" style="display:block;margin:0 0 18px"><h2>Reinigung beginnt mit einem klaren Plan.</h2><p>Wir stehen für verlässliche Abläufe, sorgfältige Ausführung und direkte Kommunikation. Gemeinsam definieren wir den passenden Leistungsumfang für Ihr Objekt.</p></div>
-          <div class="feature-list"><div class="feature-box"><b>Persönlich</b><span>Direkter Ansprechpartner</span></div><div class="feature-box"><b>Flexibel</b><span>Leistungen nach Bedarf</span></div><div class="feature-box"><b>Transparent</b><span>Klarer Ablauf &amp; Angebot</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="team">
-      <div class="container team-grid">
-        <div class="team-image reveal"><img src="assets/weisswerk-team.webp" alt="Das WEISSWERK Team" loading="lazy"></div>
-        <div class="team-copy">
-          <div class="eyebrow">Unser Team</div>
-          <h2>Kompetent. Engagiert. Für Ihre Sauberkeit.</h2>
-          <p>Hinter WEISSWERK steht ein engagiertes Team mit einem gemeinsamen Anspruch: professionelle Arbeit, zuverlässiger Service und ein Ergebnis, auf das Sie sich verlassen können.</p>
-          <div class="team-points">
-            <div class="team-point"><span class="icon">✓</span><div><strong>Gemeinsam abgestimmt</strong><span>Klare Zuständigkeiten und kurze Wege.</span></div></div>
-            <div class="team-point"><span class="icon">✓</span><div><strong>Professionell auftreten</strong><span>Gepflegtes, einheitliches Auftreten beim Kunden.</span></div></div>
-            <div class="team-point"><span class="icon">✓</span><div><strong>Mit Verantwortung</strong><span>Sorgfalt und Verlässlichkeit bei jedem Einsatz.</span></div></div>
+          <div class="hero-points">
+            <span><b>✓</b> Individuell geplant</span>
+            <span><b>✓</b> Persönliche Betreuung</span>
+            <span><b>✓</b> Klare Abläufe</span>
           </div>
-          <a class="btn btn-dark" href="#karriere">Karriere bei WEISSWERK →</a>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#kontakt">Kostenloses Angebot anfragen <span>→</span></a>
+            <a class="btn btn-whatsapp" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp schreiben <span>↗</span></a>
+          </div>
+
+          <div class="hero-contact">
+            <a href="tel:+436765802455"><small>Telefon</small><strong>+43 676 580 24 55</strong><span>Mo – Fr · 07:00 – 18:00</span></a>
+            <a href="mailto:office@weiss-werk.at"><small>E-Mail</small><strong>office@weiss-werk.at</strong><span>Wir antworten schnell</span></a>
+            <div><small>Region</small><strong>Graz &amp; Steiermark</strong><span>Regional für Sie da</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-assurance">
+          <img class="meister-badge" src="assets/meisterbetrieb.webp" alt="Qualitätssiegel Meisterbetrieb">
+          <div class="assurance-card">
+            <div class="assurance-icon">✦</div>
+            <div><strong>Qualität &amp; Fachkompetenz</strong><span>Professionelle Reinigung</span></div>
+          </div>
+          <div class="assurance-card green">
+            <div class="assurance-icon">✓</div>
+            <div><strong>Zuverlässige Lösungen</strong><span>Sauber &amp; effizient</span></div>
+          </div>
+          <div class="team-float">
+            <div class="team-float-icon">👥</div>
+            <div><strong>Unser Team</strong><span>Kompetent. Engagiert.</span></div>
+            <a href="#team" aria-label="Zum Team">→</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><span class="trust-icon">✓</span><strong>Individuell geplant</strong><span>Maßgeschneiderte Leistungen</span></div>
+        <div><span class="trust-icon">✓</span><strong>Persönliche Betreuung</strong><span>Direkte Ansprechpartner</span></div>
+        <div><span class="trust-icon">✓</span><strong>Klare Abläufe</strong><span>Transparent &amp; zuverlässig</span></div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="section services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Unsere Leistungen</div>
+            <h2>Professionelle Reinigungslösungen</h2>
+          </div>
+          <p>Wir bieten maßgeschneiderte Reinigungslösungen für Unternehmen, Büros, Gewerbeobjekte und Privathaushalte – zuverlässig, professionell und mit höchster Qualität.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon">▦</span><span>01</span></div>
+            <h3>Büroreinigung</h3>
+            <p>Saubere und gepflegte Arbeitsplätze für ein angenehmes Arbeitsumfeld.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon">⌁</span><span>02</span></div>
+            <h3>Glas- &amp; Fensterreinigung</h3>
+            <p>Streifenfreie Sauberkeit für klare Sicht und einen gepflegten Eindruck.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
+          <article class="service-card featured">
+            <div class="service-top"><span class="service-icon">▣</span><span>03</span></div>
+            <h3>Fassadenreinigung</h3>
+            <p>Werterhalt Ihrer Immobilie durch professionelle Pflege der Außenflächen.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon">◒</span><span>04</span></div>
+            <h3>Bodenreinigung</h3>
+            <p>Professionelle Pflege für unterschiedliche Bodenbeläge und Oberflächen.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon">◈</span><span>05</span></div>
+            <h3>Unterhaltsreinigung</h3>
+            <p>Regelmäßige Sauberkeit für dauerhaft gepflegte Räume und Objekte.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon">✦</span><span>06</span></div>
+            <h3>Sonderreinigung</h3>
+            <p>Flexible Lösungen für besondere Anforderungen und individuelle Projekte.</p>
+            <a href="#kontakt">Mehr erfahren →</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section trust" aria-labelledby="trust-title">
-      <div class="container trust-grid">
-        <div class="trust-badge reveal"><img src="assets/meisterbetrieb.webp" alt="WEISSWERK Qualitätssiegel"></div>
-        <div class="trust-copy"><div class="eyebrow light">Qualität &amp; Anspruch</div><h2 id="trust-title">Ein starker Auftritt beginnt mit sauberer Arbeit.</h2><p>Die visuelle Qualitätskennzeichnung unseres Unternehmens ist hier bewusst prominent platziert. So sehen Besucher auf den ersten Blick den professionellen Anspruch von WEISSWERK.</p><div class="trust-note">Hinweis: Das Siegel wird als von Ihnen bereitgestellte Grafik dargestellt.</div></div>
+    <section id="ueber-uns" class="section soft">
+      <div class="container about-grid">
+        <div class="about-card">
+          <img src="assets/weisswerk-logo.png" alt="WEISSWERK Logo">
+          <div class="about-line"></div>
+          <strong>GEBÄUDEREINIGUNG &amp; FACILITY SERVICES</strong>
+          <span>SAUBER. ZUVERLÄSSIG. PROFESSIONELL.</span>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Über WEISSWERK</div>
+          <h2>Reinigung mit Anspruch.<br><span>Service mit Persönlichkeit.</span></h2>
+          <p>WEISSWERK steht für zuverlässige Gebäudereinigung, klare Kommunikation und sorgfältige Arbeit. Wir planen unsere Leistungen individuell und achten auf dauerhaft hohe Qualität.</p>
+          <div class="about-features">
+            <div><b>01</b><span>Persönliche Betreuung</span></div>
+            <div><b>02</b><span>Flexible Lösungen</span></div>
+            <div><b>03</b><span>Professionelle Abläufe</span></div>
+          </div>
+          <a class="btn btn-dark" href="#kontakt">Gespräch vereinbaren →</a>
+        </div>
       </div>
     </section>
 
-    <section class="section career" id="karriere">
+    <section id="team" class="section team-section">
+      <div class="container">
+        <div class="section-head centered">
+          <div class="eyebrow">Unser Team</div>
+          <h2>Ein starkes Team für Ihre Sauberkeit</h2>
+          <p>Erfahren, motiviert und zuverlässig – unser Team steht für Qualität, Engagement und Kundenzufriedenheit.</p>
+        </div>
+
+        <div class="team-showcase">
+          <div class="team-photo">
+            <img src="assets/weisswerk-team.webp" alt="Das WEISSWERK Team">
+          </div>
+          <div class="team-text">
+            <div class="mini-label">WEISSWERK</div>
+            <h3>Kompetent. Engagiert. Für Ihre Sauberkeit.</h3>
+            <p>Wir verbinden persönliche Betreuung mit professionellen Reinigungsabläufen und einem hohen Anspruch an Qualität.</p>
+            <div class="team-points">
+              <span>✓ Zuverlässige Ansprechpartner</span>
+              <span>✓ Sorgfältige Ausführung</span>
+              <span>✓ Lösungsorientierter Service</span>
+            </div>
+            <a class="btn btn-primary" href="#kontakt">Kontakt aufnehmen →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Unser Ablauf</div>
+            <h2>Einfach. Klar. Professionell.</h2>
+          </div>
+          <p>Von der ersten Anfrage bis zur laufenden Reinigung bleibt der Ablauf transparent und nachvollziehbar.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><span>01</span><h3>Anfrage</h3><p>Sie schildern uns Ihr Objekt und Ihren Bedarf.</p></div>
+          <div class="process-step"><span>02</span><h3>Besichtigung</h3><p>Wir besprechen Anforderungen, Flächen und Intervalle.</p></div>
+          <div class="process-step"><span>03</span><h3>Angebot</h3><p>Sie erhalten eine klare, individuelle Kalkulation.</p></div>
+          <div class="process-step last"><span>04</span><h3>Service</h3><p>Wir setzen den vereinbarten Reinigungsplan zuverlässig um.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="karriere" class="section career">
       <div class="container career-grid">
         <div class="career-copy">
-          <div class="eyebrow">Karriere</div><h2>Du möchtest Teil unseres Teams werden?</h2>
-          <p>Schick uns deine Kontaktdaten und ein paar kurze Informationen zu dir. Wir melden uns persönlich und besprechen die nächsten Schritte.</p>
-          <p><strong>Wichtig:</strong> Lebenslauf oder weitere Unterlagen können anschließend direkt per E-Mail nachgereicht werden.</p>
+          <div class="eyebrow">Karriere</div>
+          <h2>Werden Sie Teil unseres Teams.</h2>
+          <p>Wir suchen motivierte Mitarbeiterinnen und Mitarbeiter für verschiedene Bereiche. Senden Sie uns Ihre Kurzbewerbung – wir melden uns persönlich.</p>
+          <div class="career-box">
+            <span>✦</span>
+            <div><strong>Jetzt bewerben</strong><small>Kurzbewerbung genügt</small></div>
+          </div>
         </div>
         <div class="career-card">
-          <form class="form" id="career-form">
-            <div class="form-row"><label>Name<input name="name" required placeholder="Vor- und Nachname" autocomplete="name"></label><label>Telefon<input name="phone" placeholder="+43 ..." autocomplete="tel"></label></div>
-            <div class="form-row"><label>E-Mail<input name="email" type="email" required placeholder="name@example.at" autocomplete="email"></label><label>Bereich<select name="role"><option>Reinigung</option><option>Glas- &amp; Fensterreinigung</option><option>Facility Services</option><option>Andere Tätigkeit</option></select></label></div>
-            <label>Nachricht<textarea name="message" required placeholder="Kurz etwas über dich und deine Erfahrung ..."></textarea></label>
-            <button class="btn btn-primary" type="submit">Bewerbung vorbereiten →</button>
-            <small>Beim Absenden wird eine E-Mail an WEISSWERK vorbereitet.</small>
+          <h3>Kurzbewerbung</h3>
+          <form id="career-form">
+            <div class="form-row">
+              <label>Vor- und Nachname<input name="name" required placeholder="Max Mustermann"></label>
+              <label>Telefon<input name="phone" type="tel" required placeholder="+43 …"></label>
+            </div>
+            <div class="form-row">
+              <label>E-Mail<input name="email" type="email" required placeholder="name@email.at"></label>
+              <label>Bereich<select name="area"><option>Reinigung</option><option>Glas- &amp; Fensterreinigung</option><option>Unterhaltsreinigung</option><option>Andere</option></select></label>
+            </div>
+            <label>Nachricht<textarea name="message" placeholder="Erzählen Sie uns kurz etwas über sich …"></textarea></label>
+            <button class="btn btn-primary" type="submit">Bewerbung per E-Mail senden →</button>
+            <small>Der Button öffnet Ihr E-Mail-Programm mit einer vorbereiteten Bewerbung.</small>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="kontakt">
+    <section id="kontakt" class="section contact">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <div class="eyebrow light">Kontakt</div><h2>Wir sprechen über Ihr Objekt.</h2><p>Sie suchen einen zuverlässigen Partner für Gebäudereinigung oder Facility Services? Schreiben Sie uns oder kontaktieren Sie uns direkt.</p>
-          <div class="contact-actions"><a class="btn btn-primary" href="tel:+436765802455">Jetzt anrufen</a><a class="btn btn-whatsapp" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp öffnen</a></div>
-          <div class="contact-meta">
-            <div class="meta"><span class="meta-icon">☎</span><div><small>Telefon</small><strong>+43 676 580 24 55</strong></div></div>
-            <div class="meta"><span class="meta-icon">✉</span><div><small>E-Mail</small><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a></div></div>
-            <div class="meta"><span class="meta-icon">⌖</span><div><small>Adresse</small><strong>Steyrergasse 47/4 · 8010 Graz · Österreich</strong></div></div>
+          <div class="eyebrow light">Kontakt</div>
+          <h2>Bereit für ein<br><span>sauberes Ergebnis?</span></h2>
+          <p>Wir freuen uns auf Ihre Anfrage. Rufen Sie uns direkt an, schreiben Sie auf WhatsApp oder senden Sie uns eine Angebotsanfrage.</p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+436765802455">☎ Jetzt anrufen</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp schreiben ↗</a>
+          </div>
+
+          <div class="contact-list">
+            <a href="tel:+436765802455"><span class="contact-icon">☎</span><span><small>Telefon</small><strong>+43 676 580 24 55</strong></span></a>
+            <a href="mailto:office@weiss-werk.at"><span class="contact-icon">✉</span><span><small>E-Mail</small><strong>office@weiss-werk.at</strong></span></a>
+            <div><span class="contact-icon">⌖</span><span><small>Adresse</small><strong>Steyrergasse 47/4, 8010 Graz</strong></span></div>
           </div>
         </div>
-        <div class="whatsapp-card">
-          <img src="assets/whatsapp-qr.webp" alt="WhatsApp QR-Code für WEISSWERK" loading="lazy">
-          <div><h3>Direkt über WhatsApp schreiben</h3><p>Scannen oder den Button verwenden und schnell mit WEISSWERK Kontakt aufnehmen.</p><a class="wa-btn" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp öffnen →</a></div>
+
+        <div class="contact-card">
+          <div class="contact-card-head">
+            <div><span class="mini-label">WhatsApp</span><h3>Direkt mit WEISSWERK schreiben</h3></div>
+            <span class="wa-dot">●</span>
+          </div>
+          <div class="whatsapp-panel">
+            <img src="assets/whatsapp-qr.webp" alt="WhatsApp QR Code von WEISSWERK">
+            <div>
+              <strong>Scannen &amp; loschatten</strong>
+              <p>Öffnen Sie den Chat direkt auf Ihrem Smartphone.</p>
+              <a class="wa-btn" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp öffnen →</a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h4>Unverbindliches Angebot</h4>
+            <form id="quote-form">
+              <div class="form-row">
+                <label>Name<input name="name" required placeholder="Ihr Name"></label>
+                <label>Unternehmen<input name="company" placeholder="Firmenname"></label>
+              </div>
+              <div class="form-row">
+                <label>E-Mail<input name="email" type="email" required placeholder="office@firma.at"></label>
+                <label>Telefon<input name="phone" type="tel" placeholder="+43 …"></label>
+              </div>
+              <label>Wie können wir helfen?<textarea name="message" required placeholder="Welche Reinigung benötigen Sie?"></textarea></label>
+              <button class="btn btn-dark" type="submit">Angebot anfragen →</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -304,39 +317,35 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div><img class="footer-logo" src="assets/weisswerk-logo.png" alt="WEISSWERK"><p>Gebäudereinigung &amp; Facility Services für Graz und die Steiermark.</p></div>
-      <div><strong>Kontakt</strong><p>Steyrergasse 47/4<br>8010 Graz, Österreich<br><a href="tel:+436765802455">+43 676 580 24 55</a></p></div>
-      <div><strong>Online</strong><p><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a><br><a href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp</a></p></div>
+      <div>
+        <img class="footer-logo" src="assets/weisswerk-logo.png" alt="WEISSWERK">
+        <p>GEBÄUDEREINIGUNG &amp; FACILITY SERVICES<br>Graz &amp; Steiermark</p>
+      </div>
+      <div>
+        <strong>Navigation</strong>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#team">Unser Team</a>
+        <a href="#karriere">Karriere</a>
+      </div>
+      <div>
+        <strong>Kontakt</strong>
+        <a href="tel:+436765802455">+43 676 580 24 55</a>
+        <a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a>
+        <span>Steyrergasse 47/4, 8010 Graz</span>
+      </div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> WEISSWERK</span><a href="#start">Nach oben ↑</a></div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> WEISSWERK. Alle Rechte vorbehalten.</span>
+      <span>Sauber. Zuverlässig. Professionell.</span>
+    </div>
   </footer>
 
-  <div class="mobile-bar"><a class="mobile-call" href="tel:+436765802455">Anrufen</a><a class="mobile-wa" href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp</a></div>
+  <div class="mobile-bar">
+    <a href="tel:+436765802455">☎ Anrufen</a>
+    <a href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
 
-  <script>
-    const nav=document.querySelector('.nav-links');
-    const menu=document.getElementById('menuBtn');
-    const mobile=document.getElementById('mobileNav');
-    if(menu&&mobile&&nav){
-      mobile.innerHTML=nav.innerHTML;
-      menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.style.display=open?'none':'flex';});
-      mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');mobile.style.display='none'}));
-    }
-    document.getElementById('year').textContent=new Date().getFullYear();
-    document.querySelectorAll('.reveal').forEach((el,i)=>el.style.transitionDelay=((i%3)*70)+'ms');
-    if('IntersectionObserver' in window){
-      const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
-      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    }
-    function mailtoForm(formId,subject){
-      const form=document.getElementById(formId);if(!form)return;
-      form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const lines=[];
-        for(const [k,v] of d.entries()){lines.push(k.toUpperCase()+': '+v)}
-        const url='mailto:office@weiss-werk.at?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n\n'));
-        window.location.href=url;
-      });
-    }
-    mailtoForm('career-form','Bewerbung – WEISSWERK');
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
