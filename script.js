@@ -1,69 +1,63 @@
-document.documentElement.classList.add('js');
-
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav-links');
-  if (menuToggle && nav) {
-    const setOpen = (open) => {
-      nav.classList.toggle('open', open);
-      menuToggle.setAttribute('aria-expanded', String(open));
-    };
-    menuToggle.addEventListener('click', () => {
-      setOpen(!nav.classList.contains('open'));
+document.addEventListener("DOMContentLoaded",()=>{
+  const menu=document.querySelector(".menu-toggle");
+  const nav=document.querySelector(".nav-links");
+  if(menu&&nav){
+    menu.addEventListener("click",()=>{
+      const open=nav.classList.toggle("open");
+      menu.setAttribute("aria-expanded",String(open));
     });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && nav.classList.contains('open')) {
-        setOpen(false);
-        menuToggle.focus();
-      }
-    });
+    nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
   }
 
-  const header = document.querySelector('.header');
-  if (header) {
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
+  const links=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sections=links.map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
+  const activate=()=>{
+    const y=window.scrollY+110;
+    let current=sections[0];
+    sections.forEach(s=>{if(s.offsetTop<=y) current=s});
+    links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+current.id));
+  };
+  activate();
+  window.addEventListener("scroll",activate,{passive:true});
 
-  const revealItems = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${(index % 3) * 70}ms`;
-      observer.observe(item);
-    });
-  } else {
-    revealItems.forEach(item => item.classList.add('visible'));
-  }
+  const year=document.getElementById("year");
+  if(year) year.textContent=new Date().getFullYear();
 
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  const form = document.getElementById('quote-form');
-  if (form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const subject = encodeURIComponent(`Angebotsanfrage – WEISSWERK`);
-      const body = encodeURIComponent(
-        `Guten Tag,\n\n` +
-        `ich möchte gerne ein Angebot von WEISSWERK anfragen.\n\n` +
-        `Name: ${data.get('name') || ''}\n` +
-        `Unternehmen: ${data.get('company') || ''}\n` +
-        `E-Mail: ${data.get('email') || ''}\n\n` +
-        `Anfrage:\n${data.get('message') || ''}\n\n` +
-        `Mit freundlichen Grüßen`
+  const career=document.getElementById("career-form");
+  if(career){
+    career.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      const d=new FormData(career);
+      const subject=encodeURIComponent("Kurzbewerbung – WEISSWERK");
+      const body=encodeURIComponent(
+        "Guten Tag,\n\n"+
+        "ich möchte mich gerne bei WEISSWERK bewerben.\n\n"+
+        "Name: "+(d.get("name")||"")+"\n"+
+        "Telefon: "+(d.get("phone")||"")+"\n"+
+        "E-Mail: "+(d.get("email")||"")+"\n"+
+        "Bereich: "+(d.get("area")||"")+"\n\n"+
+        "Nachricht:\n"+(d.get("message")||"")
       );
-      window.location.href = `mailto:office@weiss-werk.at?subject=${subject}&body=${body}`;
+      window.location.href="mailto:office@weiss-werk.at?subject="+subject+"&body="+body;
+    });
+  }
+
+  const quote=document.getElementById("quote-form");
+  if(quote){
+    quote.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      const d=new FormData(quote);
+      const subject=encodeURIComponent("Unverbindliche Angebotsanfrage – WEISSWERK");
+      const body=encodeURIComponent(
+        "Guten Tag,\n\n"+
+        "ich möchte gerne ein unverbindliches Angebot von WEISSWERK anfragen.\n\n"+
+        "Name: "+(d.get("name")||"")+"\n"+
+        "Unternehmen: "+(d.get("company")||"")+"\n"+
+        "E-Mail: "+(d.get("email")||"")+"\n"+
+        "Telefon: "+(d.get("phone")||"")+"\n\n"+
+        "Anfrage:\n"+(d.get("message")||"")
+      );
+      window.location.href="mailto:office@weiss-werk.at?subject="+subject+"&body="+body;
     });
   }
 });
