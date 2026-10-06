@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>WEISSWERK</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Manrope',Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.eyebrow{color:var(--brand);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+h2{margin:10px 0 14px;font-size:42px;line-height:1.12;color:var(--navy)}
+h3{margin:0 0 8px;font-size:21px;color:var(--navy)}
+p{margin:0;line-height:1.65;color:#41566b}
+.btn{display:inline-block;background:var(--brand);color:#fff;font-weight:800;padding:16px 30px;border-radius:999px;transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{background:var(--navy);transform:translateY(-3px);box-shadow:0 12px 24px rgba(11,31,51,.25)}
+.ghost{display:inline-block;border:2px solid var(--brand);color:var(--brand);font-weight:800;padding:14px 28px;border-radius:999px;transition:all .25s}
+.ghost:hover{background:var(--brand);color:#fff}
+.nav>a,.dd>a{position:relative;padding:8px 0}
+.nav>a:after,.dd>a:after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--sky);border-radius:3px;transition:width .3s}
+.nav>a:hover:after,.dd:hover>a:after{width:100%}
+.dd{position:relative}
+.dd .menu{display:none;position:absolute;top:100%;left:-16px;min-width:270px;background:#fff;border-radius:16px;box-shadow:0 18px 40px rgba(11,31,51,.18);padding:10px;z-index:30;animation:rise .3s both}
+.dd:hover .menu,.dd:focus-within .menu{display:block}
+.menu a{display:block;padding:11px 14px;border-radius:10px;font-weight:600;transition:padding .2s,background .2s}
+.menu a:hover{background:var(--water);padding-left:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.card{display:block;position:relative;background:#fff;border:1px solid #cfe6f5;border-radius:22px;padding:30px;transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{border-color:var(--brand);transform:translateY(-8px);box-shadow:0 22px 44px rgba(26,111,196,.2)}
+.ico{display:flex;width:56px;height:56px;border-radius:16px;background:var(--water);align-items:center;justify-content:center;transition:transform .4s,background .4s}
+.card:hover .ico{transform:rotate(-8deg) scale(1.12);background:var(--sky)}
+.num{position:absolute;right:26px;top:24px;color:#b9d9ef;font-weight:800;font-size:28px}
+.card h3{margin-top:18px}
+.more{display:inline-block;margin-top:18px;color:var(--brand);font-weight:800}
+.more i{display:inline-block;font-style:normal;transition:transform .3s}
+.card:hover .more i{transform:translateX(8px)}
+.tile{background:var(--water);border-radius:20px;padding:28px;transition:transform .3s}
+.tile:hover{transform:translateX(8px)}
+.big{font-size:44px;font-weight:800;color:var(--sky)}
+.in{display:block;width:100%;box-sizing:border-box;border:1px solid #bcd9ee;border-radius:12px;padding:14px;font:inherit;margin-top:6px;background:#fff}
+label{font-weight:600;color:var(--navy);font-size:14px}
+@keyframes rise{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:rotateY(-16deg) rotateX(8deg) translateY(0)}50%{transform:rotateY(-10deg) rotateX(5deg) translateY(-16px)}}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 12px 30px rgba(140,20,45,.3),0 0 0 0 rgba(140,20,45,.35)}70%{box-shadow:0 12px 30px rgba(140,20,45,.3),0 0 0 18px rgba(140,20,45,0)}100%{box-shadow:0 12px 30px rgba(140,20,45,.3),0 0 0 0 rgba(140,20,45,0)}}
+@keyframes drive{from{transform:translateX(-24px)}to{transform:translateX(24px)}}
+.rv{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.logo3d{background:#fff;border-radius:30px;padding:30px;border:1px solid #cfe6f5;transform-style:preserve-3d;animation:floaty 7s ease-in-out infinite;box-shadow:1px 1px 0 #b9d9ef,2px 2px 0 #b9d9ef,3px 3px 0 #b9d9ef,4px 4px 0 #b3d4ec,5px 5px 0 #b3d4ec,6px 6px 0 #aacdea,7px 7px 0 #aacdea,8px 8px 0 #a1c6e6,9px 9px 0 #a1c6e6,10px 10px 0 #98bfe2,28px 36px 60px rgba(11,31,51,.3)}
+.seal{border-radius:50%;background:#fff;animation:pulse 3s infinite;display:block}
+.marq{display:flex;width:max-content;animation:marq 28s linear infinite}
+.marq span{font-weight:800;font-size:22px;color:#fff;margin:0 26px;letter-spacing:1px}
+.marq b{color:var(--sky)}
+.slot{border-radius:24px;overflow:hidden;min-height:300px;background:var(--water);border:2px dashed #8cc6ee;display:flex;transition:transform .35s,box-shadow .35s}
+.slot:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(26,111,196,.2)}
+.ph{margin:auto;text-align:center;padding:24px;display:flex;flex-direction:column;gap:6px;align-items:center}
+.ph b{color:var(--navy);font-size:20px}.ph span{color:#41566b}.ph em{font-style:normal;color:var(--brand);font-weight:600;font-size:13px;margin-top:8px}
+.van{animation:drive 5s ease-in-out infinite alternate}
+.shot{border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(11,31,51,.14)}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.shot:hover img{transform:scale(1.05)}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.logoflat{animation:fl 6s ease-in-out infinite;filter:drop-shadow(0 14px 18px rgba(11,31,51,.2))}
+.seal{border:4px solid #fff;box-shadow:0 8px 22px rgba(140,20,45,.3)}
+.hd{background:#fff;box-shadow:0 8px 28px rgba(11,31,51,.09);border-bottom:1px solid #d7ebf8;position:sticky;top:0;z-index:20}
+.hdin{max-width:1360px;margin:0 auto;padding:10px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.pill{display:flex;align-items:center;gap:4px;background:var(--water);border-radius:999px;padding:6px;white-space:nowrap}
+.pill>a,.pill .dd>a{display:block;padding:11px 15px;border-radius:999px;font-weight:600;font-size:15px;color:var(--navy);transition:background .25s,color .25s,box-shadow .25s}
+.pill>a:hover,.pill .dd:hover>a{background:#fff;color:var(--brand);box-shadow:0 4px 12px rgba(26,111,196,.18)}
+.pill .dd>a:after{display:none}
+.pill .menu{top:calc(100% + 8px);left:0}
+@media(max-width:1180px){.hdin{flex-wrap:wrap;justify-content:center}.pill{order:3;width:100%;justify-content:center;flex-wrap:wrap;border-radius:24px}}
+@media(min-width:1181px){.hd .seal{position:relative;left:19px}}
+.lgr{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.en{display:none}
+#lg-en:checked ~ * .de{display:none}
+#lg-en:checked ~ * .en{display:inline}
+.topbar{background:var(--navy);color:#cfe3f3;font-size:13px}
+.tbin{max-width:1360px;margin:0 auto;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;gap:12px 16px;flex-wrap:wrap}
+.tbl{display:flex;flex-wrap:wrap;gap:6px 28px}
+.tbl a:hover{color:#fff}
+.lang{display:flex;background:rgba(255,255,255,.14);border-radius:999px;padding:3px}
+.lb{cursor:pointer;padding:5px 16px;border-radius:999px;font-weight:800;letter-spacing:1px;font-size:12px;color:#cfe3f3;transition:background .25s,color .25s}
+#lg-de:checked ~ * .l-de,#lg-en:checked ~ * .l-en{background:#fff;color:var(--navy)}
+</style>
+</helmet>
+<div style="--navy:{{navy}};--brand:{{brand}};--sky:{{sky}};--water:{{water}};background:#f4fafe;font-family:'Manrope',Arial,sans-serif;color:var(--navy)"><input type="radio" name="lg" id="lg-de" class="lgr" checked=""><input type="radio" name="lg" id="lg-en" class="lgr">
+<div class="topbar"><div class="tbin"><div class="tbl"><span><span class="de">Mo – Fr · 07:00 – 18:00</span><span class="en">Mon – Fri · 07:00 – 18:00</span></span><a href="tel:+436765802455">+43 676 580 24 55</a><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a></div>
+<div class="lang" role="group" aria-label="Sprache / Language"><label for="lg-de" class="lb l-de">DE</label><label for="lg-en" class="lb l-en">EN</label></div></div></div>
+
+
+
+
+<header class="hd">
+<div class="hdin">
+<a href="#start" aria-label="WEISSWERK Startseite" style="flex:none"><img src="./assets/c77c9fa82b5d7fa2c98449fefe914c3f.png" alt="WEISSWERK Gebäudereinigung &amp; Facility Services" style="height:76px;width:auto;display:block"></a>
+<nav class="pill"><div class="dd"><a href="#leistungen" style="display:flex;align-items:center"><span class="de">Leistungen</span><span class="en">Services</span><svg width="10" height="10" viewBox="0 0 10 10" style="margin-left:8px" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></a><div class="menu"><a href="#leistungen"><span class="de">Büroreinigung</span><span class="en">Office cleaning</span></a><a href="#leistungen"><span class="de">Glas- &amp; Fensterreinigung</span><span class="en">Glass &amp; window cleaning</span></a><a href="#leistungen"><span class="de">Fassadenreinigung</span><span class="en">Facade cleaning</span></a><a href="#leistungen"><span class="de">Bodenreinigung</span><span class="en">Floor cleaning</span></a><a href="#leistungen"><span class="de">Unterhaltsreinigung</span><span class="en">Regular maintenance cleaning</span></a><a href="#leistungen"><span class="de">Sonderreinigung</span><span class="en">Special cleaning</span></a></div></div><a href="#ueber-uns"><span class="de">Über uns</span><span class="en">About us</span></a><a href="#team"><span class="de">Unser Team</span><span class="en">Our team</span></a><a href="#einsaetze"><span class="de">Einsätze</span><span class="en">Projects</span></a><a href="#karriere"><span class="de">Karriere</span><span class="en">Careers</span></a><a href="#kontakt"><span class="de">Kontakt</span><span class="en">Contact</span></a></nav>
+<div style="display:flex;align-items:center;gap:22px;flex:none"><a href="#kontakt" class="btn" style="white-space:nowrap"><span class="de">Angebot anfragen →</span><span class="en">Request a quote →</span></a><img class="seal" src="./assets/457adc7da381814cc30cc9adf3748e53.png" alt="Meisterbetrieb" style="width:104px;height:104px;display:block"></div>
+</div>
+</header>
+
+<section id="start" style="position:relative;overflow:hidden;background:var(--navy);padding:72px 0 96px">
+<video autoplay muted loop playsinline preload="auto" poster="./assets/hero-poster.jpg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><source src="./assets/hero-cleaning.mp4" type="video/mp4"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,31,51,.84) 0%,rgba(11,31,51,.62) 55%,rgba(11,31,51,.42) 100%)"></div>
+<div class="wrap" style="position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:56px;align-items:center">
+<div style="flex:1 1 500px">
+<div class="eyebrow rv" style="color:var(--sky)"><span class="de">Graz &amp; Steiermark</span><span class="en">Graz &amp; Styria</span></div>
+<h1 class="rv" style="margin:14px 0 20px;font-size:64px;line-height:1.05;color:#fff;animation-delay:.1s"><span style="font-weight:800"><span class="de">Sauber.</span><span class="en">Clean.</span></span> <span style="font-weight:300"><span class="de">Zuverlässig.</span><span class="en">Reliable.</span></span> <span style="font-weight:800"><span class="de">Professionell.</span><span class="en">Professional.</span></span></h1>
+<p class="rv" style="font-size:19px;max-width:560px;color:#e3f3fc;animation-delay:.2s"><span class="de">Professionelle Gebäudereinigung und Facility Services für Büros, Gewerbeobjekte und Immobilien – Ihr starker Partner in Graz und der Steiermark.</span><span class="en">Professional building cleaning and facility services for offices, commercial properties and real estate – your strong partner in Graz and Styria.</span></p>
+<div class="rv" style="display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 36px;animation-delay:.3s"><a href="#kontakt" class="btn"><span class="de">Kostenloses Angebot anfragen</span><span class="en">Request a free quote</span></a><a href="#leistungen" class="ghost" style="border-color:#fff;color:#fff"><span class="de">Leistungen ansehen</span><span class="en">View services</span></a></div>
+<div class="rv" style="display:flex;flex-wrap:wrap;gap:12px;animation-delay:.4s"><span style="background:#fff;border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Individuell geplant</span><span class="en">Individually planned</span></span><span style="background:#fff;border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Persönliche Betreuung</span><span class="en">Personal support</span></span><span style="background:#fff;border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Klare Abläufe</span><span class="en">Clear processes</span></span></div>
+</div>
+<div style="flex:1 1 420px;display:flex;justify-content:center"><img class="logoflat" src="./assets/c77c9fa82b5d7fa2c98449fefe914c3f.png" alt="WEISSWERK Logo" style="width:100%;max-width:600px;height:auto;display:block;box-sizing:border-box;background:rgba(255,255,255,.95);border-radius:28px;padding:28px"></div>
+</div>
+</section>
+
+<section style="background:var(--navy);padding:30px 0"><div class="wrap" style="max-width:1280px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 0"><div style="padding:6px 28px;"><div style="color:#fff;font-weight:800;font-size:18px"><span class="de">Meisterbetrieb</span><span class="en">Master-certified business</span></div><div style="color:#9fc3df;font-size:14px;margin-top:4px"><span class="de">Denkmal-, Fassaden- &amp; Gebäudereiniger</span><span class="en">Master of monument, facade &amp; building cleaning</span></div></div><div style="padding:6px 28px;border-left:1px solid rgba(255,255,255,.16);"><div style="color:#fff;font-weight:800;font-size:18px"><span class="de">Graz &amp; Steiermark</span><span class="en">Graz &amp; Styria</span></div><div style="color:#9fc3df;font-size:14px;margin-top:4px"><span class="de">Regional für Sie da</span><span class="en">Locally at your service</span></div></div><div style="padding:6px 28px;border-left:1px solid rgba(255,255,255,.16);"><div style="color:#fff;font-weight:800;font-size:18px"><span class="de">Individuell geplant</span><span class="en">Individually planned</span></div><div style="color:#9fc3df;font-size:14px;margin-top:4px"><span class="de">Maßgeschneiderte Leistungen</span><span class="en">Tailored services</span></div></div><div style="padding:6px 28px;border-left:1px solid rgba(255,255,255,.16);"><div style="color:#fff;font-weight:800;font-size:18px"><span class="de">Persönliche Betreuung</span><span class="en">Personal support</span></div><div style="color:#9fc3df;font-size:14px;margin-top:4px"><span class="de">Direkte Ansprechpartner</span><span class="en">Direct contacts</span></div></div></div></section>
+
+<section id="leistungen" style="padding:96px 0">
+<div class="wrap">
+<div class="eyebrow"><span class="de">Unsere Leistungen</span><span class="en">Our services</span></div>
+<h2><span class="de">Professionelle Reinigungslösungen</span><span class="en">Professional cleaning solutions</span></h2>
+<p style="max-width:680px;margin-bottom:44px"><span class="de">Wir bieten maßgeschneiderte Reinigungslösungen für Unternehmen, Büros, Gewerbeobjekte und Privathaushalte – zuverlässig, professionell und mit höchster Qualität.</span><span class="en">We offer tailored cleaning solutions for companies, offices, commercial properties and private households – reliable, professional and of the highest quality.</span></p>
+<div class="grid"><a href="#kontakt" class="card rv" style="animation-delay:0.0s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"></path></svg></span><span class="num">01</span><h3><span class="de">Büroreinigung</span><span class="en">Office cleaning</span></h3><p><span class="de">Saubere und gepflegte Arbeitsplätze für ein angenehmes Arbeitsumfeld.</span><span class="en">Clean, well-kept workplaces for a pleasant working environment.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a><a href="#kontakt" class="card rv" style="animation-delay:0.12s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"></rect><path d="M12 3v18M4 12h16"></path></svg></span><span class="num">02</span><h3><span class="de">Glas- &amp; Fensterreinigung</span><span class="en">Glass &amp; window cleaning</span></h3><p><span class="de">Streifenfreie Sauberkeit für klare Sicht und einen gepflegten Eindruck.</span><span class="en">Streak-free cleanliness for clear views and a well-kept impression.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a><a href="#kontakt" class="card rv" style="animation-delay:0.24s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V8l6-5 6 5v13M10 21v-5h4v5"></path></svg></span><span class="num">03</span><h3><span class="de">Fassadenreinigung</span><span class="en">Facade cleaning</span></h3><p><span class="de">Werterhalt Ihrer Immobilie durch professionelle Pflege der Außenflächen.</span><span class="en">Preserving the value of your property through professional care of exterior surfaces.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a><a href="#kontakt" class="card rv" style="animation-delay:0.36s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5-9-5zM3 13l9 5 9-5"></path></svg></span><span class="num">04</span><h3><span class="de">Bodenreinigung</span><span class="en">Floor cleaning</span></h3><p><span class="de">Professionelle Pflege für unterschiedliche Bodenbeläge und Oberflächen.</span><span class="en">Professional care for different floor coverings and surfaces.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a><a href="#kontakt" class="card rv" style="animation-delay:0.48s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3-6.2M20 4v4h-4"></path></svg></span><span class="num">05</span><h3><span class="de">Unterhaltsreinigung</span><span class="en">Regular maintenance cleaning</span></h3><p><span class="de">Regelmäßige Sauberkeit für dauerhaft gepflegte Räume und Objekte.</span><span class="en">Regular cleanliness for permanently well-kept rooms and properties.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a><a href="#kontakt" class="card rv" style="animation-delay:0.6s"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1a6fc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"></path></svg></span><span class="num">06</span><h3><span class="de">Sonderreinigung</span><span class="en">Special cleaning</span></h3><p><span class="de">Flexible Lösungen für besondere Anforderungen und individuelle Projekte.</span><span class="en">Flexible solutions for special requirements and individual projects.</span></p><span class="more"><span class="de">Mehr erfahren</span><span class="en">Learn more</span> <i>→</i></span></a>
+<div class="card rv" style="background:var(--navy);border-color:var(--navy);animation-delay:.72s"><h3 style="color:#fff;margin-top:0"><span class="de">Individuelle Anfrage?</span><span class="en">Individual enquiry?</span></h3><p style="color:#bcd9ee"><span class="de">Nicht das Passende gefunden? Wir erstellen ein maßgeschneidertes Konzept für Ihre Bedürfnisse.</span><span class="en">Did not find what you need? We create a tailored concept for your requirements.</span></p><span class="more" style="color:var(--sky)"><span class="de">Angebot anfordern</span><span class="en">Request a quote</span> <i>→</i></span></div>
+</div>
+</div>
+</section>
+
+<section id="team" style="background:#f4fafe">
+
+<div style="position:relative;height:780px;overflow:hidden;background:var(--navy)">
+<img src="./assets/2a3d5eb9508b88a6ffaa025f2fa1d29b.jpg" alt="Das Team der Firma WEISSWERK" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%">
+<div style="position:absolute;inset:0;background:rgba(60,160,230,.2)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(to top,rgba(11,31,51,.92),rgba(11,31,51,0))"></div>
+<div class="wrap" style="position:absolute;left:0;right:0;bottom:70px">
+<div class="eyebrow" style="color:var(--sky)"><span class="de">Unser Team</span><span class="en">Our team</span></div>
+<h2 style="color:#fff;font-size:56px;max-width:760px"><span class="de">Das Team der Firma</span><span class="en">The team at</span> <span style="font-weight:800">WEISS</span><span style="font-weight:300">WERK</span></h2>
+<p style="color:#d6e8f6;font-size:19px;max-width:620px"><span class="de">Erfahren, motiviert und zuverlässig – Kompetent. Engagiert. Für Ihre Sauberkeit.</span><span class="en">Experienced, motivated and reliable – competent, committed, for your cleanliness.</span></p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px"><span style="background:rgba(255,255,255,.92);color:var(--navy);border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Zuverlässige Ansprechpartner</span><span class="en">Reliable contacts</span></span><span style="background:rgba(255,255,255,.92);color:var(--navy);border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Sorgfältige Ausführung</span><span class="en">Careful execution</span></span><span style="background:rgba(255,255,255,.92);color:var(--navy);border-radius:999px;padding:10px 18px;font-weight:600"><span class="de">Lösungsorientierter Service</span><span class="en">Solution-oriented service</span></span></div>
+</div>
+</div>
+<svg viewBox="0 0 1440 70" preserveAspectRatio="none" style="display:block;width:100%;height:70px;background:#0b1f33" aria-hidden="true"><path d="M0 40C240 80 480 0 720 30S1200 70 1440 20V70H0z" fill="#f4fafe"></path></svg>
+</section>
+
+<section id="einsaetze" style="padding:40px 0 96px">
+<div class="wrap">
+<div class="eyebrow"><span class="de">Unsere Einsätze</span><span class="en">Our projects</span></div>
+<h2><span class="de">Vom Alltag bis zur Grundreinigung</span><span class="en">From everyday care to deep cleaning</span></h2>
+<p style="max-width:680px;margin-bottom:40px"><span class="de">Laufende Pflege, tiefgehende Reinigung, gepflegte Außenanlagen und unser Fuhrpark – so arbeitet WEISSWERK.</span><span class="en">Ongoing care, thorough cleaning, well-kept outdoor areas and our fleet – this is how WEISSWERK works.</span></p>
+<div style="display:grid;gap:22px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px"><div class="shot rv" style="animation-delay:0s"><img src="./assets/f9d72d7464c7c8bb3e3962460a1c2772.jpg" alt="Regelmäßige Reinigung"></div><div class="shot rv" style="animation-delay:0.15s"><img src="./assets/219f582ddb95a020a1303b64eac37ede.jpg" alt="Grundreinigung"></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px"><div style="display:grid;grid-template-columns:544fr 1092fr;gap:22px;grid-column:1/-1"><div class="shot rv" style="animation-delay:0s"><img src="./assets/9c2325ece142ea5d66087428b8b324e2.jpg" alt="Gartenpflege"></div><div class="shot rv" style="animation-delay:0.15s"><img src="./assets/479c2b50796c433dbf4e2041b71f3bac.jpg" alt="WEISSWERK Firmenfahrzeug"></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="ueber-uns" style="background:#fff;padding:96px 0">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
+<div style="flex:1 1 440px"><div class="eyebrow"><span class="de">Über</span><span class="en">About</span> <span style="font-weight:800">WEISS</span><span style="font-weight:300">WERK</span></div>
+<h2><span class="de">Handwerk mit Meisterbrief. Service mit Persönlichkeit.</span><span class="en">Master craftsmanship. Service with personality.</span></h2>
+<p style="font-size:18px;margin-bottom:16px"><span class="de">WEISSWERK ist ein Meisterbetrieb für Gebäudereinigung in Graz. Unser Meisterbrief als Denkmal-, Fassaden- und Gebäudereiniger steht für fachliche Qualifikation, sorgfältiges Arbeiten und Verantwortung für Ihr Objekt.</span><span class="en">WEISSWERK is a master-certified building cleaning company in Graz. Our master certificate as a monument, facade and building cleaner stands for professional qualification, careful work and responsibility for your property.</span></p>
+<p style="font-size:18px"><span class="de">Dazu kommt langjährige Erfahrung in der Gebäudereinigung. Vom Büro über die Glas- und Fassadenreinigung bis zur Sonderreinigung kennen wir die Anforderungen unterschiedlicher Objekte und planen unsere Leistungen individuell, mit klarer Kommunikation und dauerhaft hoher Qualität.</span><span class="en">On top of that comes long experience in building cleaning. From offices and glass and facade cleaning to special cleaning, we know the demands of different properties and plan our services individually, with clear communication and consistently high quality.</span></p>
+<a href="#kontakt" class="btn" style="margin-top:28px"><span class="de">Gespräch vereinbaren</span><span class="en">Arrange a conversation</span></a></div>
+<div style="flex:1 1 440px;display:flex;flex-direction:column;gap:18px">
+<div class="tile" style="display:flex;gap:22px;align-items:center"><img src="./assets/457adc7da381814cc30cc9adf3748e53.png" alt="Meisterbetrieb" style="width:92px;height:92px;flex:none"><div><h3><span class="de">Meisterbrief</span><span class="en">Master certificate</span></h3><p><span class="de">Denkmal-, Fassaden- und Gebäudereiniger – für Qualität, die man sieht.</span><span class="en">Monument, facade and building cleaner – quality you can see.</span></p></div></div>
+<div class="tile"><h3><span class="de">Langjährige Erfahrung</span><span class="en">Long experience</span></h3><p><span class="de">Erfahrung in vielen Bereichen der Gebäudereinigung, von der laufenden Pflege bis zur Spezialreinigung.</span><span class="en">Experience in many areas of building cleaning, from regular upkeep to specialist cleaning.</span></p></div>
+<div class="tile"><h3><span class="de">Persönliche Betreuung</span><span class="en">Personal support</span></h3><p><span class="de">Direkte Ansprechpartner, flexible Lösungen und transparente, zuverlässige Abläufe.</span><span class="en">Direct contacts, flexible solutions and transparent, reliable processes.</span></p></div>
+</div>
+</div>
+</section>
+
+<section style="background:var(--navy);padding:96px 0;color:#fff">
+<div class="wrap">
+<div class="eyebrow" style="color:var(--sky)"><span class="de">Unser Ablauf</span><span class="en">Our process</span></div>
+<h2 style="color:#fff"><span class="de">Einfach. Klar. Professionell.</span><span class="en">Simple. Clear. Professional.</span></h2>
+<div class="grid" style="margin-top:40px;gap:36px"><div class="rv" style="animation-delay:0.0s"><div class="big">01</div><h3 style="color:#fff"><span class="de">Anfrage</span><span class="en">Enquiry</span></h3><p style="color:#bcd9ee"><span class="de">Sie schildern uns Ihr Objekt und Ihren Bedarf.</span><span class="en">You describe your property and your needs.</span></p></div><div class="rv" style="animation-delay:0.12s"><div class="big">02</div><h3 style="color:#fff"><span class="de">Besichtigung</span><span class="en">Site visit</span></h3><p style="color:#bcd9ee"><span class="de">Wir besprechen Anforderungen, Flächen und Intervalle.</span><span class="en">We discuss requirements, areas and intervals.</span></p></div><div class="rv" style="animation-delay:0.24s"><div class="big">03</div><h3 style="color:#fff"><span class="de">Angebot</span><span class="en">Quote</span></h3><p style="color:#bcd9ee"><span class="de">Sie erhalten eine klare, individuelle Kalkulation.</span><span class="en">You receive a clear, individual calculation.</span></p></div><div class="rv" style="animation-delay:0.36s"><div class="big">04</div><h3 style="color:#fff">Service</h3><p style="color:#bcd9ee"><span class="de">Wir setzen den vereinbarten Reinigungsplan zuverlässig um.</span><span class="en">We carry out the agreed cleaning plan reliably.</span></p></div></div>
+</div>
+</section>
+
+<section id="karriere" style="background:var(--water);padding:72px 0">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 460px"><div class="eyebrow"><span class="de">Karriere</span><span class="en">Careers</span></div><h2 style="font-size:38px"><span class="de">Werden Sie Teil unseres Teams.</span><span class="en">Join our team.</span></h2><p><span class="de">Wir suchen motivierte Mitarbeiterinnen und Mitarbeiter. Senden Sie uns Ihre Kurzbewerbung – wir melden uns persönlich.</span><span class="en">We are looking for motivated team members. Send us a short application – we will get back to you personally.</span></p></div>
+<a href="#kontakt" class="btn"><span class="de">Jetzt bewerben</span><span class="en">Apply now</span></a>
+</div>
+</section>
+
+<section id="kontakt" style="padding:96px 0">
+<div class="wrap">
+<div class="eyebrow"><span class="de">Kontakt</span><span class="en">Contact</span></div><h2><span class="de">Bereit für ein sauberes Ergebnis?</span><span class="en">Ready for a spotless result?</span></h2>
+<p style="max-width:640px;margin-bottom:44px"><span class="de">Rufen Sie uns direkt an, schreiben Sie auf WhatsApp oder senden Sie uns eine Angebotsanfrage.</span><span class="en">Call us directly, message us on WhatsApp or send us a quote request.</span></p>
+<div style="display:flex;flex-wrap:wrap;gap:28px;align-items:stretch">
+<div style="flex:1 1 300px;background:#fff;border-radius:24px;padding:32px;text-align:center"><h3>WhatsApp</h3><p style="margin-bottom:16px"><span class="de">Scannen &amp; loschatten</span><span class="en">Scan &amp; start chatting</span></p><a href="https://wa.me/message/UCFQ6NMRFW7VH1" target="_blank" rel="noopener" aria-label="WhatsApp-Chat mit WEISSWERK öffnen"><img src="./assets/f5eff6f49fe786ae32db094171cff408.png" alt="WhatsApp QR-Code von WEISSWERK" style="width:210px;height:210px;display:block;margin:0 auto 20px"></a><a href="https://wa.me/message/UCFQ6NMRFW7VH1" class="ghost" target="_blank" rel="noopener"><span class="de">WhatsApp öffnen</span><span class="en">Open WhatsApp</span></a></div>
+<div style="flex:2 1 460px;background:#fff;border-radius:24px;padding:32px">
+<h3><span class="de">Unverbindliches Angebot</span><span class="en">Non-binding quote</span></h3>
+<form id="qf" novalidate>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px">
+<div><label for="n">Name</label><input id="n" name="name" required class="in" type="text"></div><div><label for="u"><span class="de">Unternehmen</span><span class="en">Company</span></label><input id="u" name="company" class="in" type="text"></div>
+<div><label for="e"><span class="de">E-Mail</span><span class="en">Email</span></label><input id="e" name="email" required class="in" type="email"></div><div><label for="t"><span class="de">Telefon</span><span class="en">Phone</span></label><input id="t" name="phone" class="in" type="tel"></div></div>
+<div style="margin-top:16px"><label for="m"><span class="de">Wie können wir helfen?</span><span class="en">How can we help?</span></label><textarea id="m" name="message" required class="in" rows="4"></textarea></div>
+<button id="qf-btn" type="submit" class="btn" style="border:0;margin-top:20px;font:inherit;font-weight:800;cursor:pointer"><span class="de">Angebot anfragen →</span><span class="en">Request a quote →</span></button>
+<div id="qf-msg" role="status" style="margin-top:16px;font-weight:600"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background:var(--navy);color:#bcd9ee;padding:64px 0 36px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px 64px;justify-content:space-between">
+<div style="flex:1 1 280px"><div style="font-size:30px;color:#fff;letter-spacing:2px"><span style="font-weight:800">WEISS</span><span style="font-weight:300">WERK</span></div><p style="color:#bcd9ee;margin-top:10px"><span class="de">Gebäudereinigung &amp; Facility Services</span><span class="en">Building cleaning &amp; facility services</span><br><span class="de">Graz &amp; Steiermark</span><span class="en">Graz &amp; Styria</span></p></div>
+<div style="line-height:2"><b style="color:#fff">Navigation</b><br><a href="#leistungen"><span class="de">Leistungen</span><span class="en">Services</span></a><br><a href="#ueber-uns"><span class="de">Über uns</span><span class="en">About us</span></a><br><a href="#team"><span class="de">Unser Team</span><span class="en">Our team</span></a><br><a href="#karriere"><span class="de">Karriere</span><span class="en">Careers</span></a></div>
+<div style="line-height:2"><b style="color:#fff"><span class="de">Kontakt</span><span class="en">Contact</span></b><br><a href="tel:+436765802455">+43 676 580 24 55</a><br><a href="mailto:office@weiss-werk.at">office@weiss-werk.at</a><br>Steyrergasse 47/4, 8010 Graz</div>
+</div>
+<div class="wrap" style="margin-top:40px;font-size:14px;color:#7fa6c4"><span class="de">© WEISSWERK. Alle Rechte vorbehalten.</span><span class="en">© WEISSWERK. All rights reserved.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"navy":{"editor":"color","default":"#0b1f33"},"brand":{"editor":"color","default":"#1a6fc4"},"sky":{"editor":"color","default":"#5db4ee"},"water":{"editor":"color","default":"#e3f3fc"},"$preview":{"width":1360,"height":4300}}'>
+class Component extends DCLogic {
+renderVals() {
+return {navy:this.props.navy??'#0b1f33',brand:this.props.brand??'#1a6fc4',sky:this.props.sky??'#5db4ee',water:this.props.water??'#e3f3fc'};
+}
+}
+</script>
+<script>
+(function(){
+var EMAIL="office@weiss-werk.at";
+function en(){var r=document.getElementById("lg-en");return r&&r.checked}
+function T(de,e){return en()?e:de}
+function msg(t,ok){var m=document.getElementById("qf-msg");if(!m)return;m.style.color=ok?"#1a7f4b":"#b3261e";m.textContent=t}
+document.addEventListener("submit",function(ev){
+ var f=ev.target;if(!f||f.id!=="qf")return;
+ ev.preventDefault();
+ var d=new FormData(f);
+ if(d.get("_honey"))return;
+ if(!String(d.get("name")||"").trim()||!/^\S+@\S+\.\S+$/.test(String(d.get("email")||""))||!String(d.get("message")||"").trim()){
+  msg(T("Bitte Name, gültige E-Mail und Nachricht ausfüllen.","Please enter your name, a valid email and a message."),false);return}
+ var btn=document.getElementById("qf-btn");btn.disabled=true;btn.style.opacity=".6";
+ msg(T("Wird gesendet …","Sending …"),true);
+ var payload={name:d.get("name"),company:d.get("company")||"-",email:d.get("email"),phone:d.get("phone")||"-",message:d.get("message"),
+  _subject:"Neue Angebotsanfrage – WEISSWERK Website",_template:"table",_captcha:"false"};
+ fetch("https://formsubmit.co/ajax/"+EMAIL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
+ .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==="false")throw new Error(j.message||"fail");return j})})
+ .then(function(){f.reset();msg(T("Vielen Dank! Ihre Anfrage wurde gesendet – wir melden uns in Kürze.","Thank you! Your request has been sent – we will get back to you shortly."),true)})
+ .catch(function(){msg(T("Senden hat leider nicht funktioniert. Bitte schreiben Sie uns direkt an "+EMAIL+" oder rufen Sie an: +43 676 580 24 55.","Sending failed. Please email us directly at "+EMAIL+" or call +43 676 580 24 55."),false)})
+ .then(function(){btn.disabled=false;btn.style.opacity="1"});
+});
+})();
+</script>
+</body>
+</html>
